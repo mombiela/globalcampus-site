@@ -1,7 +1,6 @@
 import { getUrlContent } from '../js/Utils.js';
-import { STXTParser } from '../js/STXTParser.js';
 import { LineSplitter } from '../js/LineSplitter.js';
-import { esDominioValido, getUrlFromHash } from './utils.js';
+import { getUrlFromHash } from './utils.js';
 
 export async function makeNavigation(hash, parser) 
 {
@@ -24,6 +23,7 @@ export async function makeNavigation(hash, parser)
 		console.log("hashIndexUrl: " + hashIndexUrl);
 	
 		let indexDoc = await getUrlContent(hashIndexUrl + "?ts=" + new Date().getTime());
+		//console.log("DOC!!!!!!!!!!!!! " + indexDoc);
 		const indexNode = (await parser.parse(indexDoc))[0];
 		console.log(indexNode.toString());
 		
@@ -60,12 +60,6 @@ export async function makeNavigation(hash, parser)
 			{
 				console.log("TEMA! = " + tema + " -> " + last + lastPart);
 
-				/*				
-				if (i == 0)
-				{
-					result.prev = {url:last, descrip: "INDEX"};
-				}
-				*/
 				if (i>0)
 				{
 					tema = allDocs[i-1];
