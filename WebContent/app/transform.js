@@ -90,11 +90,14 @@ function renderChild(child, parent)
 
 function renderTema(child)
 {
+	let href = window.location.href;
+	let i = href.lastIndexOf("/");
+	href = href.substring(0,i+1);
 	let text = child.getText();
 	let lineSplitter = LineSplitter.split(text);
 	let url = lineSplitter.prefix;
 	let descrip = lineSplitter.centralText;
-	let link = $("<a>").attr("href",window.location.href + url).text(descrip);
+	let link = $("<a>").attr("href",href + url).text(descrip);
 	let li = $("<li>").append(link);
 	return li;
 }
