@@ -1,5 +1,3 @@
-import { getUrlContent } from '../js/Utils.js';
-
 export function esDominioValido(dominio) 
 {
     // Expresión regular para verificar nombres de dominio v�lidos

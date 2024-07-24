@@ -1,8 +1,7 @@
 export async function getUrlContent(url) {
     const headers = new Headers({
         "User-Agent": "Mozilla/5.0",
-        "Accept-Language": "en-US,en;q=0.5",
-        "Accept": "text/html"
+        "Accept-Language": "en-US,en;q=0.5"
     });
 
     const response = await fetch(url, {
