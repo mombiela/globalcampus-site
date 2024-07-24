@@ -1,9 +1,36 @@
 import { getUrlContent } from '../js/Utils.js';
 import { STXTParser } from '../js/STXTParser.js';
 import { LineSplitter } from '../js/LineSplitter.js';
-import { esDominioValido } from './utils.js';
+import { esDominioValido, getUrlFromHash } from './utils.js';
 
-export async function makeNavigation(hash, parser) {
+export async function makeNavigation(hash, parser) 
+{
+	let result = {};
+	try
+	{
+		let i = hash.lastIndexOf("/");
+		let hashIndex = hash.substring(0, i) + "/index";
+		if (hash.endsWith("/")) hashIndex = hash + "index"; // Índex!!
+	
+		console.log("hashIndex: " + hashIndex);
+		let hashIndexUrl = getUrlFromHash(hashIndex);
+		console.log("hashIndexUrl: " + hashIndexUrl);
+	
+		let indexDoc = await getUrlContent(hashIndexUrl + "?ts=" + new Date().getTime());
+		const node = (await parser.parse(indexDoc))[0];
+		console.log(node.toString());
+		
+		let hashParts = hashIndex.split("/");
+		console.log("HashParts: " + hashParts);
+	}
+	catch (e)
+	{
+		console.log(e);
+	}
+	return result;
+}
+
+export async function makeOldNavigation(hash, parser) {
 	let result = {};
 	let isDir = hash.endsWith("/");
 	if (isDir) hash = hash.substring(0, hash.length - 1);
@@ -22,7 +49,9 @@ export async function makeNavigation(hash, parser) {
 			{
 				page = page + "/" + hashParts[i];
 				console.log("BUSCAR: " + page + "/index.stxt");
-				let indexDoc = await getUrlContent(page + "/index.stxt" + "?ts=" + new Date().getTime());
+				let stxtUrl = getUrlFromHash(page + "/index.stxt");
+				console.log("BUSCAR URL COMPLETA: " + stxtUrl);
+				let indexDoc = await getUrlContent(stxtUrl + "?ts=" + new Date().getTime());
 				
 				//console.log(indexDoc);
 				const node = (await parser.parse(indexDoc))[0];

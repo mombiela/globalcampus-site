@@ -33,7 +33,7 @@ export function getUrlFromHash(hashIni)
 	}
 	else if (hashParts.length >=3 && hashParts[0]=="github")
 	{
-		stxtUrl = "https://raw.githubusercontent.com/" + hashParts[1] + "/" + hashParts[2] + "/master/";
+		stxtUrl = "https://raw.githubusercontent.com/" + hashParts[1] + "/" + hashParts[2] + "/master";
 		startIndex = 3;
 	}
 	else if (esNombrePaginaValido(stxtUrl))
