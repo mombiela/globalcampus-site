@@ -47,6 +47,8 @@ async function buildContent(hash)
 	try
 	{
 		// Obtenemos content
+		if (hash.endsWith("/")) hash = hash + "index";
+		console.log("HASH = " + hash);
 		let stxtUrl = getUrlFromHash(hash);
 		let contentFromUrl = await getUrlContent(stxtUrl);
 		
