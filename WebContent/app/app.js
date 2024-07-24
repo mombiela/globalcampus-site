@@ -3,7 +3,7 @@ import { STXTParser } from '../js/STXTParser.js';
 import { NamespaceRetriever } from '../js/NamespaceRetriever.js';
 import { transform } from './transform.js';
 import { makeNavigation } from './navigation.js';
-import { esDominioValido } from './utils.js';
+import { esDominioValido, getUrlFromHash } from './utils.js';
 
 document.addEventListener("DOMContentLoaded", ContentLoaded);
 
@@ -40,61 +40,16 @@ async function loadPage()
     await buildContent(hash);
 }
 
-async function buildContent(hashIni)
+async function buildContent(hash)
 {
     const content = $("#content");
     content.empty();
 	try
 	{
-		// Validamos que empieze por "#"
-		let hash = hashIni;
-		if (!hash.startsWith("#")) return buildError("Page not valid");
-		hash = hash.substring(1);
-		
-		// Is dir?
 		const isDir = hash.endsWith("/");
-		if (isDir) hash = hash.substring(0, hash.length -1);
-		
-		// Miramos si es local o remota y que tenga params v�lidos
-		const hashParts = hash.split("/");
-		
-		// Miramos tamaño máximo
-		if (hashParts.length > 8)  return buildError("Page definition not valid");
-		
-		// Miramos partes
-		let stxtUrl = hashParts[0];
-		let startIndex = 1;
-		if (esDominioValido(stxtUrl))
-		{
-			stxtUrl = "https://" + stxtUrl;	
-		}
-		else if (hashParts.length >=3 && hashParts[0]=="github")
-		{
-			stxtUrl = "https://raw.githubusercontent.com/" + hashParts[1] + "/" + hashParts[2] + "/master/";
-			startIndex = 3;
-		}
-		else if (esNombrePaginaValido(stxtUrl))
-		{
-			stxtUrl = obtenerBaseURL() + "/" + stxtUrl;	
-		}
-		else
-		{
-			return buildError("Page definition not valid");			
-		}
-		
-		// Miramos otras partes
-		for (let i = startIndex; i<hashParts.length; i++)
-		{
-			if (hashParts[i].length == 0) throw new Exception();
-			stxtUrl = stxtUrl + "/" + hashParts[i]; 
-		}
-		
-		// Miramos final
-		if (isDir)	stxtUrl += "/index.stxt";
-		else     	stxtUrl += ".stxt";
 		
 		// Obtenemos content
-		console.log("URL = " + stxtUrl);
+		let stxtUrl = getUrlFromHash(hash);
 		let contentFromUrl = await getUrlContent(stxtUrl + "?ts=" + new Date().getTime());
 		
 		// Final
@@ -105,10 +60,10 @@ async function buildContent(hashIni)
 		const node = (await parser.parse(contentFromUrl))[0];
 		
 		// Make navigation
-		const navigation = await makeNavigation(isDir, hashParts, parser);
+		const navigation = await makeNavigation(isDir, hash, parser);
 
 		// Transform page
-		transform(hashIni, node, navigation);
+		transform(hash, node, navigation);
 		plantuml_runonce();
 		
 		// Insertamos en fuente
@@ -121,23 +76,3 @@ async function buildContent(hashIni)
 	}
 }
 
-// --------------------
-// Funciones auxiliares
-// --------------------
-
-function buildError(message)
-{
-	return "<h1>" + message + "</h1>"
-}
-
-function esNombrePaginaValido(pagina) 
-{
-    // Expresi�n regular para verificar p�gina v�lida
-    const regexDominio = /^[a-zA-Z0-9-_]+$/;
-    return regexDominio.test(pagina);
-}
-
-function obtenerBaseURL() {
-    const url = window.location;
-    return `${url.protocol}//${url.host}`;
-}
