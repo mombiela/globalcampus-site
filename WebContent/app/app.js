@@ -33,7 +33,7 @@ async function ContentLoaded()
     await loadPage();
 } 
 
-// Funci�n para cargar la página correcta basada en el hash
+// Función para cargar la página correcta basada en el hash
 async function loadPage() 
 {
     const hash = window.location.hash || "#index";
@@ -59,7 +59,7 @@ async function buildContent(hashIni)
 		const hashParts = hash.split("/");
 		
 		// Miramos tamaño máximo
-		if (hashParts.length > 5)  return buildError("Page definition not valid");
+		if (hashParts.length > 8)  return buildError("Page definition not valid");
 		
 		// Miramos partes
 		let stxtUrl = hashParts[0];
