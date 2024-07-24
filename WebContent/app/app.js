@@ -46,8 +46,6 @@ async function buildContent(hash)
     content.empty();
 	try
 	{
-		const isDir = hash.endsWith("/");
-		
 		// Obtenemos content
 		let stxtUrl = getUrlFromHash(hash);
 		let contentFromUrl = await getUrlContent(stxtUrl + "?ts=" + new Date().getTime());
@@ -60,7 +58,7 @@ async function buildContent(hash)
 		const node = (await parser.parse(contentFromUrl))[0];
 		
 		// Make navigation
-		const navigation = await makeNavigation(isDir, hash, parser);
+		const navigation = await makeNavigation(hash, parser);
 
 		// Transform page
 		transform(hash, node, navigation);

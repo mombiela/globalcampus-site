@@ -3,10 +3,13 @@ import { STXTParser } from '../js/STXTParser.js';
 import { LineSplitter } from '../js/LineSplitter.js';
 import { esDominioValido } from './utils.js';
 
-export async function makeNavigation(isDir, hashParts, parser) {
+export async function makeNavigation(hash, parser) {
 	let result = {};
+	let isDir = hash.endsWith("/");
+	if (isDir) hash = hash.substring(0, hash.length - 1);
 	
-	console.log("ISDIR: " + isDir);
+	console.log("hash: " + hash);
+	let hashParts = hash.split("/");
 	console.log("hashParts: " + hashParts);
 	
 	let indexDocs = [];
