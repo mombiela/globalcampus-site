@@ -48,7 +48,7 @@ async function buildContent(hash)
 	{
 		// Obtenemos content
 		let stxtUrl = getUrlFromHash(hash);
-		let contentFromUrl = await getUrlContent(stxtUrl + "?ts=" + new Date().getTime());
+		let contentFromUrl = await getUrlContent(stxtUrl);
 		
 		// Final
 	    const namespaceRetriever = new NamespaceRetriever();

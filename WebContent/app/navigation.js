@@ -22,7 +22,7 @@ export async function makeNavigation(hash, parser)
 		let hashIndexUrl = getUrlFromHash(hashIndex);
 		console.log("hashIndexUrl: " + hashIndexUrl);
 	
-		let indexDoc = await getUrlContent(hashIndexUrl + "?ts=" + new Date().getTime());
+		let indexDoc = await getUrlContent(hashIndexUrl);
 		//console.log("DOC!!!!!!!!!!!!! " + indexDoc);
 		const indexNode = (await parser.parse(indexDoc))[0];
 		console.log(indexNode.toString());
