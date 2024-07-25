@@ -1,0 +1,11 @@
+Namespace: www.globalcampus.site/unit.stxt
+	Unit:
+		H1: (*)
+		H2: (*)
+		Text: (*) TEXT
+		Assert: (*) TEXT
+		Alert: (*) TEXT
+		Code: (*) TEXT
+		Plantuml: (*) TEXT
+		
+# Example of document

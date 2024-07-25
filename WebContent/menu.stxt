@@ -1,0 +1,13 @@
+Namespace: globalcampus.site/menu.stxt
+	Menu:
+		Link: (+)
+
+# --------------------------------
+# Example of documents menu:
+# 
+# Menu:
+#     Link: (link-1)  Link 1
+#     Link: (link-2)  Link 2
+#     Link: (another) Another link
+# --------------------------------
+
