@@ -2,3 +2,15 @@ Namespace: globalcampus.site/module.stxt
 	Module:
 		Section: (+)
 			Unit: (+)
+
+# ----------------------------------------------
+# Example of module:
+# 
+# Module: Name of module
+#     Section: Name of section 1
+#         Unit: (unit-1) Name of Unit 1
+#         Unit: (unit-2) Name of Unit 2
+#     Section: Name of section 2
+#         Unit: (other-unit) Name of Other Unit
+#
+# ----------------------------------------------
