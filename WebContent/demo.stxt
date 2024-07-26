@@ -56,7 +56,7 @@ Unit(globalcampus.site/unit.stxt): Cabecera primer nivel
 	    fc --> UC4
 	    @enduml
 	
-	h3: Otra cabecera
+	h2: Otra cabecera
 		
 	plantuml:
 		@startuml
