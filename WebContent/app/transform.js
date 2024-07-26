@@ -23,7 +23,7 @@ export function transform(hash, node, navigation)
 	// Insertamos node
 	if (node.getName()=="module" || node.getName()=="unit")
 	{
-		$("<h1 class='text-center'>").text(node.getText()).appendTo(innerContent);
+		$("<h1 class='title'>").text(node.getText()).appendTo(innerContent);
 	}
 
 	// Insertamos childs
@@ -48,11 +48,11 @@ function renderChild(child, parent)
 	
 	if(name == "h1")
 	{
-		$("<h2>").text(text).appendTo(parent);
+		$("<h1>").text(text).appendTo(parent);
 	}
 	else if(name == "h2")
 	{
-		$("<h3>").text(text).appendTo(parent);
+		$("<h2>").text(text).appendTo(parent);
 	}
 	else if(name == "text")
 	{
