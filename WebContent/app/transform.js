@@ -76,7 +76,7 @@ function renderChild(child, parent)
 	}
 	else if (name == "section")
 	{
-		$("<h3>").text(text).appendTo(parent);
+		$("<h2>").text(text).appendTo(parent);
 		
 		// Childs
 		let ul = $("<ul>").appendTo(parent);
