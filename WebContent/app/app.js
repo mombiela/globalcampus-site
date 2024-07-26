@@ -27,7 +27,7 @@ async function buildContent(hash)
     content.empty();
 	try
 	{
-		let ts = "?ts=" + new Date().getTime();
+		let ts = "?ts=" + new Date().getTime(); // TODO Revisar uso
 		let grammar1 = await getUrlContent("/menu.stxt" + ts);
 		let grammar2 = await getUrlContent("/module.stxt" + ts);
 		let grammar3 = await getUrlContent("/unit.stxt" + ts);
