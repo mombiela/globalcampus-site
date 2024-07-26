@@ -2,6 +2,5 @@ Module(globalcampus.site/module.stxt):Global Campus
 
 	Section: Links actuales en index 
 		Unit: (#github/mombiela/techwizard-academy/WebContent/) Tech Wizard Academy
-		Unit: (#prompt) Prompts de cursos
 		Unit: (#demo) Demo completo
 		Unit: (#github/mombiela/stxt-book/es/) Semantic Text Github
