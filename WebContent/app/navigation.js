@@ -30,7 +30,7 @@ export async function makeNavigation(hash, parser)
 		console.log("HashParts: " + hashParts);
 		
 		// Hilo Ariadna
-		let hiloAriadna = [{url: last, descrip: indexNode.getChild("title").getText()}];
+		let hiloAriadna = [{url: last, descrip: indexNode.getText()}];
 		result["hilo_ariadna"] = hiloAriadna;
 		
 		// -----------
