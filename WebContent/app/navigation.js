@@ -38,10 +38,10 @@ export async function makeNavigation(hash, parser)
 		// -----------
 		
 		let allDocs = [];
-		let parts = indexNode.getChildsByName("part");
+		let parts = indexNode.getChildsByName("section");
 		for (let i = 0; i<parts.length; i++)
 		{
-			let temas = parts[i].getChildsByName("tema");
+			let temas = parts[i].getChildsByName("link");
 			for (let j = 0; j<temas.length; j++)
 			{
 				let tema = temas[j];
