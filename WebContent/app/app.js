@@ -28,9 +28,7 @@ async function buildContent(hash)
 	try
 	{
 		let ts = "?ts=" + new Date().getTime(); // TODO Revisar uso
-		let grammar1 = await getUrlContent("/menu.stxt" + ts);
-		let grammar2 = await getUrlContent("/module.stxt" + ts);
-		let grammar3 = await getUrlContent("/unit.stxt" + ts);
+		let grammar = await getUrlContent("/namespace.stxt" + ts);
 		
 		// Obtenemos content
 		if (hash.endsWith("/")) hash = hash + "index";
@@ -40,9 +38,7 @@ async function buildContent(hash)
 		
 		// Final
 	    const namespaceRetriever = new NamespaceRetriever();
-		await namespaceRetriever.addGrammarDefinition(grammar1);
-		await namespaceRetriever.addGrammarDefinition(grammar2);
-		await namespaceRetriever.addGrammarDefinition(grammar3);
+		await namespaceRetriever.addGrammarDefinition(grammar);
 		
 		const parser = new STXTParser(namespaceRetriever);
 		const node = (await parser.parse(contentFromUrl))[0];
