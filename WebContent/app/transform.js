@@ -1,5 +1,5 @@
 import { mainConent } from './template.js';
-import { LineSplitter } from '../js/LineSplitter.js';
+import { LineSplitter } from '../js/stxt-parser.min.js';
 
 export function transform(hash, node, navigation) 
 {

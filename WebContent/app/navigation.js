@@ -1,5 +1,4 @@
-import { getUrlContent } from '../js/Utils.js';
-import { LineSplitter } from '../js/LineSplitter.js';
+import { getUrlContent, LineSplitter } from '../js/stxt-parser.min.js';
 import { getUrlFromHash } from './utils.js';
 
 export async function makeNavigation(hash, parser) 

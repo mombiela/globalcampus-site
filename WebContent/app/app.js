@@ -1,6 +1,4 @@
-import { getUrlContent } from '../js/Utils.js';
-import { STXTParser } from '../js/STXTParser.js';
-import { NamespaceRetriever } from '../js/NamespaceRetriever.js';
+import { NamespaceRetriever, getUrlContent,STXTParser } from '../js/stxt-parser.min.js';
 import { transform } from './transform.js';
 import { makeNavigation } from './navigation.js';
 import { esDominioValido, getUrlFromHash } from './utils.js';
