@@ -1,4 +1,4 @@
-Module(globalcampus.site/module.stxt):
+Module(globalcampus.site/module.stxt):Global Campus
 
 	Section: Links actuales en index 
 		Unit: (#github/mombiela/techwizard-academy/WebContent/) Tech Wizard Academy

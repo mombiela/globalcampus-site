@@ -1,7 +1,7 @@
-Unit(globalcampus.site/unit.stxt): Cabecera primer nivel
+Unit(globalcampus.site/unit.stxt): Demo aplicación
 
-	h1:	Cabecera segundo nivel
-	h2:	Cabecera tercer nivel
+	h1:	Cabecera primer nivel
+	h2:	Cabecera segundo nivel
 	
 	text:
 		Esto es un texto normal en formato wiki.

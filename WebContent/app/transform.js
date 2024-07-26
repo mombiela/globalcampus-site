@@ -17,8 +17,16 @@ export function transform(hash, node, navigation)
 	content.append(result);
 	*/
 	
-	// Insertamos childs
+	// Inner Content
 	const innerContent = $("#inner_content");
+	
+	// Insertamos node
+	if (node.getName()=="module" || node.getName()=="unit")
+	{
+		$("<h1 class='text-center'>").text(node.getText()).appendTo(innerContent);
+	}
+
+	// Insertamos childs
 	const childs = node.getChilds();
 	let code = 0;
 	let plantuml = 0;
@@ -38,15 +46,11 @@ function renderChild(child, parent)
 	const text = child.getText();
 	const childs = child.getChilds();
 	
-	if(name == "h1" || name == "title")
-	{
-		$("<h1 class='text-center'>").text(text).appendTo(parent);
-	}
-	else if(name == "h2")
+	if(name == "h1")
 	{
 		$("<h2>").text(text).appendTo(parent);
 	}
-	else if(name == "h3")
+	else if(name == "h2")
 	{
 		$("<h3>").text(text).appendTo(parent);
 	}
