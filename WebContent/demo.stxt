@@ -1,8 +1,7 @@
-Tema(www.cursos.com/tema.stxt):
+Unit(globalcampus.site/unit.stxt): Cabecera primer nivel
 
-	h1: Cabecera primer nivel
-	h2:	Cabecera segundo nivel
-	h3:	Cabecera tercer nivel
+	h1:	Cabecera segundo nivel
+	h2:	Cabecera tercer nivel
 	
 	text:
 		Esto es un texto normal en formato wiki.

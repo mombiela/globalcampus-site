@@ -5,23 +5,6 @@ import { esDominioValido, getUrlFromHash } from './utils.js';
 
 document.addEventListener("DOMContentLoaded", ContentLoaded);
 
-let grammar1 = `Namespace: www.cursos.com/tema.stxt
-	Tema:
-		h1: (?)
-		h2: (*)
-		h3: (*)
-		text: (*) TEXT
-		code: (*) TEXT
-		plantuml: (*) TEXT
-		assert: (*) TEXT
-		alert: (*) TEXT`;
-		
-let grammar2 = `Namespace: www.cursos.com/index.stxt
-	Index:
-		title: (1)
-		part: (+)
-			tema: (+)`;
-
 async function ContentLoaded()
 {
     // Escuchar los cambios en el hash de la URL
@@ -44,16 +27,22 @@ async function buildContent(hash)
     content.empty();
 	try
 	{
+		let grammar1 = await getUrlContent("/menu.stxt");
+		let grammar2 = await getUrlContent("/module.stxt");
+		let grammar3 = await getUrlContent("/unit.stxt");
+		
 		// Obtenemos content
 		if (hash.endsWith("/")) hash = hash + "index";
 		console.log("HASH = " + hash);
 		let stxtUrl = getUrlFromHash(hash);
-		let contentFromUrl = await getUrlContent(stxtUrl);
+		let contentFromUrl = await getUrlContent(stxtUrl + "?ts=" + new Date());
 		
 		// Final
 	    const namespaceRetriever = new NamespaceRetriever();
 		await namespaceRetriever.addGrammarDefinition(grammar1);
 		await namespaceRetriever.addGrammarDefinition(grammar2);
+		await namespaceRetriever.addGrammarDefinition(grammar3);
+		
 		const parser = new STXTParser(namespaceRetriever);
 		const node = (await parser.parse(contentFromUrl))[0];
 		

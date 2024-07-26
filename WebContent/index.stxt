@@ -1,9 +1,7 @@
-Tema(www.cursos.com/tema.stxt):
+Module(globalcampus.site/module.stxt):
 
-	h1: Links actuales en index 
-	
-	text:
-		* [Tech Wizard Academy](#github/mombiela/techwizard-academy/WebContent/)
-		* [Prompts de cursos](#prompt)
-		* [Demo completo](#demo)
-		* [Semantic Text Github](#github/mombiela/stxt-book/es/)
+	Section: Links actuales en index 
+		Unit: (#github/mombiela/techwizard-academy/WebContent/) Tech Wizard Academy
+		Unit: (#prompt) Prompts de cursos
+		Unit: (#demo) Demo completo
+		Unit: (#github/mombiela/stxt-book/es/) Semantic Text Github

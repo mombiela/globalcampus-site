@@ -70,7 +70,7 @@ function renderChild(child, parent)
 	{
 		$("<img>").attr("uml", text).appendTo(parent);
 	}
-	else if (name == "part")
+	else if (name == "section")
 	{
 		$("<h3>").text(text).appendTo(parent);
 		
