@@ -7,7 +7,7 @@ export const mainConent = `
 		</div>
 		<div class="row">
 			<div class="col-6 p-0">
-				<h2><a href="https://globalcampus.site">GlobalCampus.site</a> & <a href="https://semantictext.info">SemanticText</a></h2>
+				<h2><a href="/">GlobalCampus.site</a> & <a href="https://semantictext.info">SemanticText</a></h2>
 			</div>
 			<div class="col-6 text-end text-bottom">
 				Licencia | Contactar

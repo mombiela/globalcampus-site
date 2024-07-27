@@ -143,11 +143,7 @@ function insertNavigation(navigation)
 		for (let i = 0; i<hilo.length; i++)
 		{
 			let elem = hilo[i];
-			$("<a>").attr("href",elem.url).text(elem.descrip).appendTo(hiloAriadna);
-			if (i != hilo.length -1)
-			{
-				$("<span class='px-2'>").text(">").appendTo(hiloAriadna);
-			}
+			$(i == 0 ? "<a class='me-3'>": "<a class='mx-3'>").attr("href",elem.url).text(elem.descrip).appendTo(hiloAriadna);
 		}
 	}
 	else

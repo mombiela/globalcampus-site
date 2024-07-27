@@ -36,14 +36,20 @@ export async function makeNavigation(hash, parser)
 		// Hilo Ariadna
 		// ------------
 		
-		let hiloAriadna = [{url: last, descrip: indexNode.getText()}];
+		let hiloAriadna = []; //[{url: last, descrip: indexNode.getText()}];
 		console.log("HILO!!!!!!!!!!!!!!!!!!!!!");
 		try
 		{
 			let menu = indexNode.getChild("menu");
-			if (menu)
+			if (menu != null)
 			{
-				console.log("MENU!!: " + menu);
+				let links = menu.getChildsByName("link");
+				console.log("LINKS: " + links);
+				for (let i = 0; i<links.length; i++)
+				{
+					let link = links[i];
+					hiloAriadna.push({url: link.getTextPrefix(), descrip: link.getTextCentral()});
+				}
 			}
 		}
 		catch (e)
