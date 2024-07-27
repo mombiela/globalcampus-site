@@ -1,7 +1,7 @@
-import { NamespaceRetriever, getUrlContent,STXTParser } from '../js/stxt-parser.min.js';
+import { NamespaceRetriever, STXTParser } from '../js/stxt-parser.min.js';
 import { transform } from './transform.js';
 import { makeNavigation } from './navigation.js';
-import { esDominioValido, getUrlFromHash } from './utils.js';
+import { esDominioValido, getUrlFromHash, getUrlContent } from './utils.js';
 
 document.addEventListener("DOMContentLoaded", ContentLoaded);
 
