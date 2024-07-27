@@ -31,6 +31,18 @@ export async function makeNavigation(hash, parser)
 		
 		let hashParts = hashIndex.split("/");
 		console.log("HashParts: " + hashParts);
+
+		// -----
+		// Title
+		// -----
+		
+		try
+		{
+			result['title'] = indexNode.getChild("title").getText();
+		}
+		catch(e)
+		{
+		}
 		
 		// ------------
 		// Hilo Ariadna

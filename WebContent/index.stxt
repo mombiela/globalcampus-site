@@ -1,4 +1,5 @@
 Index(globalcampus.site/namespace.stxt): ¡Bienvenidos!
+	Title: GlobalCampus.site
 	Menu:
 		Link: (#tech_docs) Documentación
 		Link: (editor.html) Editor

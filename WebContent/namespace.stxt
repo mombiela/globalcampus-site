@@ -4,6 +4,7 @@ Namespace: globalcampus.site/namespace.stxt
 			Link: (+)
 		Menu: (?)
 			Link: (+)
+		Title: (?)
 			
 	Document:
 		Header: (*)

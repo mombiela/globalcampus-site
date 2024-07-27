@@ -72,7 +72,7 @@ function renderChild(child, parent)
 			ch.appendTo(ul);
 		}		
 	}
-	else if(name == "menu")
+	else if(name == "menu" || name=="title")
 	{
 		// No hacemos nada
 	}
@@ -170,6 +170,16 @@ function insertNavigation(navigation)
 		}
 		
 		navDiv.clone().appendTo("#nav2");
+	}
+	
+	// Title
+	if (navigation.title)
+	{
+		$("#main_title").text(navigation.title);
+	}
+	else
+	{
+		$("#main_title").text("GlobalCampus");
 	}
 }
 
