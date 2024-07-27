@@ -4,9 +4,10 @@ Namespace: globalcampus.site/namespace.stxt
 			Link: (+)
 		Menu: (?)
 			Link: (+)
-	Unit:
-		H1: (*)
-		H2: (*)
+			
+	Document:
+		Header: (*)
+		Subheader: (*)
 		Text: (*) TEXT
 		Assert: (*) TEXT
 		Alert: (*) TEXT

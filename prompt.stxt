@@ -37,7 +37,7 @@ Tema(www.cursos.com/tema.stxt):
 #		        }
 #		// ]]></script>
 	
-	h2: Prompt temario curso
+	Subheader: Prompt temario curso
 	
 	code: 
 		Hola, me gustaría hacer un curso de XXXXX y me gustaría que me hicieras un temario. <br />Debe ser nivel principiante e intermedio. Me gustaría que explicaras YYYYYYYYYY.
@@ -48,7 +48,7 @@ Tema(www.cursos.com/tema.stxt):
 		No quiero muchos subapartados, máximo 5.
 		Muchas gracias.
 		
-	h2: Prompt formato respuesta
+	Subheader: Prompt formato respuesta
 	
 	code: 
 		Voy a hacerte preguntas sobre los puntos del curso y todas la respuestas debe estar en texto plano, para que se pueda copiar y pegar fácilmente.
@@ -65,17 +65,17 @@ Tema(www.cursos.com/tema.stxt):
 		
 		¿Has entendido las instrucciones?
 	
-	h2: Prompt apartado curso (inicial)
+	Subheader: Prompt apartado curso (inicial)
 		
 	Code:
 		Me gustaría que me explicaras el apartado "Conceptos y tecnologías del backend".
 		
-	h2: Prompt apartado siguiente
+	Subheader: Prompt apartado siguiente
 	
 	code: 
 		Ahora "conceptos de xxxx"
 		
-	h2: Riniciar curso
+	Subheader: Riniciar curso
 	
 	code: 
 		Hola, estoy haciendo un curso de xxx, con los siguientes puntos:

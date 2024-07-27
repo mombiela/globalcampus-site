@@ -32,11 +32,11 @@ function renderChild(child, parent)
 	const text = child.getText();
 	const childs = child.getChilds();
 	
-	if(name == "h1")
+	if(name == "header")
 	{
 		$("<h1>").text(text).appendTo(parent);
 	}
-	else if(name == "h2")
+	else if(name == "subheader")
 	{
 		$("<h2>").text(text).appendTo(parent);
 	}
@@ -71,6 +71,10 @@ function renderChild(child, parent)
 			let ch = renderTema(childs[i]);
 			ch.appendTo(ul);
 		}		
+	}
+	else if(name == "menu")
+	{
+		// No hacemos nada
 	}
 	else
 	{

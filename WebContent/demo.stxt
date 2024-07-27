@@ -1,7 +1,7 @@
-Unit(globalcampus.site/namespace.stxt): Demo aplicación
+Document (globalcampus.site/namespace.stxt): Demo aplicación
 
-	h1:	Cabecera primer nivel
-	h2:	Cabecera segundo nivel
+	Header:	Cabecera primer nivel
+	Subheader:	Cabecera segundo nivel
 	
 	text:
 		Esto es un texto normal en formato wiki.
@@ -56,7 +56,7 @@ Unit(globalcampus.site/namespace.stxt): Demo aplicación
 	    fc --> UC4
 	    @enduml
 	
-	h2: Otra cabecera
+	Subheader: Otra cabecera
 		
 	plantuml:
 		@startuml
