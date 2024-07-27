@@ -20,11 +20,8 @@ export function transform(hash, node, navigation)
 	// Inner Content
 	const innerContent = $("#inner_content");
 	
-	// Insertamos node
-	if (node.getName()=="module" || node.getName()=="unit")
-	{
-		$("<h1 class='title'>").text(node.getText()).appendTo(innerContent);
-	}
+	// Insertamos nombre
+	$("<h1 class='title'>").text(node.getText()).appendTo(innerContent);
 
 	// Insertamos childs
 	const childs = node.getChilds();

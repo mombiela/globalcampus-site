@@ -2,8 +2,8 @@ Namespace: globalcampus.site/namespace.stxt
 	Index:
 		Section: (+)
 			Link: (+)
-	Menu:
-		Link: (+)
+		Menu: (?)
+			Link: (+)
 	Unit:
 		H1: (*)
 		H2: (*)
