@@ -1,8 +1,8 @@
 Index(globalcampus.site/namespace.stxt): Global Campus
 	Menu:
-		Link: (#doc_tecnica) Documentación técnica
-		Link: (editor.html) Editor Contenido
-		Link: (#demo) Demo simple
+		Link: (#tech_docs) Documentación
+		Link: (editor.html) Editor
+		Link: (#demo) Demo
 		
 	Section: Webs asociadas 
 		Link: (#github/mombiela/techwizard-academy/WebContent/) Tech Wizard Academy
