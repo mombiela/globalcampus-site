@@ -6,6 +6,7 @@ export async function makeNavigation(hash, parser)
 	let result = {};
 	try
 	{
+		console.log("**** NAVIGATION: " + hash);
 		let i = hash.lastIndexOf("/");
 		let currentDoc = hash.substring(i+1);
 		let hashIndex = hash.substring(0, i) + "/index";
@@ -15,6 +16,8 @@ export async function makeNavigation(hash, parser)
 		 	hashIndex = hash + "index"; // Índex!!
 		 	currentDoc = last;	
 		}
+		
+		if (i == -1) hashIndex = "#index"; // Hack para página incicial
 	
 		console.log("CurrentDoc: " + currentDoc);
 		console.log("hashIndex: " + hashIndex);
@@ -29,8 +32,25 @@ export async function makeNavigation(hash, parser)
 		let hashParts = hashIndex.split("/");
 		console.log("HashParts: " + hashParts);
 		
+		// ------------
 		// Hilo Ariadna
+		// ------------
+		
 		let hiloAriadna = [{url: last, descrip: indexNode.getText()}];
+		console.log("HILO!!!!!!!!!!!!!!!!!!!!!");
+		try
+		{
+			let menu = indexNode.getChild("menu");
+			if (menu)
+			{
+				console.log("MENU!!: " + menu);
+			}
+		}
+		catch (e)
+		{
+			console.log(e);
+		}
+		
 		result["hilo_ariadna"] = hiloAriadna;
 		
 		// -----------
