@@ -1,21 +1,12 @@
 import { mainConent } from './template.js';
 import { LineSplitter } from '../js/stxt-parser.min.js';
 
-export function transform(hash, node, navigation) 
+export function transform(node, navigation) 
 {
     const content = $("#content");
 
 	// Primera parte del contenido	
 	content.append(mainConent);
-	
-	// Para debug
-	/*
-	let result = $("<div class='container-fluid'>");
-	result.append("<h2>HASH: " + hash + "</h2>");
-	let pre = $("<pre>").text(node.toString());
-	result.append(pre);
-	content.append(result);
-	*/
 	
 	// Inner Content
 	const innerContent = $("#inner_content");
@@ -25,8 +16,6 @@ export function transform(hash, node, navigation)
 
 	// Insertamos childs
 	const childs = node.getChilds();
-	let code = 0;
-	let plantuml = 0;
 	for(let i = 0; i<childs.length; i++)
 	{
 		let child = childs[i];

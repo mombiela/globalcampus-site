@@ -1,7 +1,7 @@
 import { NamespaceRetriever, STXTParser, getUrlContent } from '../js/stxt-parser.min.js';
 import { transform } from './transform.js';
 import { makeNavigation } from './navigation.js';
-import { esDominioValido, getUrlFromHash } from './utils.js';
+import { getUrlFromHash } from './utils.js';
 
 document.addEventListener("DOMContentLoaded", ContentLoaded);
 
@@ -47,7 +47,7 @@ async function buildContent(hash)
 		const navigation = await makeNavigation(hash, parser);
 
 		// Transform page
-		transform(hash, node, navigation);
+		transform(node, navigation);
 		plantuml_runonce();
 		
 		// Insertamos en fuente
