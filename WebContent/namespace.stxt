@@ -7,8 +7,13 @@ Namespace: globalcampus.site/namespace.stxt
 		Title: (?)
 			
 	Document:
+		metadata:(?)
+			description: (?)
+			author: (?)
+			last modif: (?)
 		Header: (*)
 		Subheader: (*)
+		Preamble: (*)
 		Text: (*) TEXT
 		Assert: (*) TEXT
 		Alert: (*) TEXT
