@@ -1,5 +1,7 @@
 Document (globalcampus.site/namespace.stxt):
+
 	Title: GlobalCampus.site
+	
 	Menu:
 		Link: (#tech_docs) Documentación
 		Link: (editor.html) Editor
