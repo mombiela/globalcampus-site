@@ -46,7 +46,7 @@ function renderChild(child, parent)
 	}
 	else if(name == "math")
 	{
-		$("<div>").text(text).appendTo(parent);
+		$("<div class='math'>").text(text).appendTo(parent);
 	}
 	else if(name == "alert")
 	{

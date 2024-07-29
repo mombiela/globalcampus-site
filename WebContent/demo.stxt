@@ -10,7 +10,7 @@ Document (globalcampus.site/namespace.stxt): Demo aplicación
 		Y otra tabla.
 		
 		**Esto es negrita**	y _Esto es cursiva_\
-		y ```Esto es un código```. Se puede hacer un salto de línea seguido:\
+		y `Esto es un código`. Se puede hacer un salto de línea seguido:\
 		Ahora un ejemplo de una lista (y un link):
 		
 		* Elem 1
@@ -41,14 +41,26 @@ Document (globalcampus.site/namespace.stxt): Demo aplicación
 		en el que hacíamos que la forma compactada fuera la misma.
 		
 	Math:
-		When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+		When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
 		$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 		
-	Content: Otro texto en math
+	Content: Otro texto en math:
+	
 	Math:
 		When `a != 0`, there are two solutions to `ax^2 + bx + c = 0` and they are
-		`x = (-b +- sqrt(b^2-4ac))/(2a) .`
+		`x = (-b +- sqrt(b^2-4ac))/(2a)`
 		
+	Subheader: Otros contenidos:	
+  	Math: This is a LaTeX inline equation: $E=mc^2$
+  	Math: This is an AsciiMath inline equation: `E=mc^2`
+  	Math: This is an AsciiMath inline equation: `x = (-b +- sqrt(b^2-4ac))/(2a)`
+  	Math: This is a LaTeX displayed equation: $$E=mc^2$$
+  	Math: This is an LaTeX displayed equation: \[E=mc^2\]
+  		
+  	Alert:
+		This is a LaTeX displayed equation:
+		$$ E=mc^2 $$
+		This is an AsciiMath displayed equation: \`E=mc^2\`    	
 	Plantuml:
 		@startuml
 			Bob -> Alice
