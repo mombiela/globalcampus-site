@@ -52,6 +52,9 @@ async function buildContent(hash)
 		
 		// Insertamos en fuente
 		$("#link_source_code").attr("href", stxtUrl);
+		
+		// Mathjax
+		window["mathReload"]();
 	}
 	catch(exception)
 	{
