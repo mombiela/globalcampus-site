@@ -1,5 +1,10 @@
 Document (globalcampus.site/namespace.stxt): Bienvenidos a STXT
 
+	Menu:
+		Link: (#github/mombiela/stxt-book/es/book/) El libro
+		Link: (#github/mombiela/stxt-book/es/about) Sobre nosotros
+		Link: (#github/mombiela/stxt-book/es/licence) Licencia
+		
 	Metadata:
 		Title: Bienvenidos a STxT
 		Description: Introducción al lenguaje STxT, ventajas sobre xml, características únicas

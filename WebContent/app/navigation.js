@@ -1,7 +1,7 @@
 import { LineSplitter, getUrlContent } from '../js/stxt-parser.min.js';
 import { getUrlFromHash } from './utils.js';
 
-export async function makeNavigation(hash, parser) 
+export async function makeNavigation(hash, parser, mainNode) 
 {
 	let result = {};
 	try
@@ -25,7 +25,6 @@ export async function makeNavigation(hash, parser)
 		console.log("hashIndexUrl: " + hashIndexUrl);
 	
 		let indexDoc = await getUrlContent(hashIndexUrl);
-		//console.log("DOC!!!!!!!!!!!!! " + indexDoc);
 		const indexNode = (await parser.parse(indexDoc))[0];
 		console.log(indexNode.toString());
 		
@@ -48,11 +47,11 @@ export async function makeNavigation(hash, parser)
 		// Hilo Ariadna
 		// ------------
 		
-		let hiloAriadna = []; //[{url: last, descrip: indexNode.getText()}];
-		console.log("HILO!!!!!!!!!!!!!!!!!!!!!");
+		let hiloAriadna = [];
 		try
 		{
-			let menu = indexNode.getChild("menu");
+			let menu = mainNode.getChild("menu");
+			if (menu == null) menu = indexNode.getChild("menu");
 			if (menu != null)
 			{
 				let links = menu.getChildsByName("link");

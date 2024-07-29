@@ -44,7 +44,7 @@ async function buildContent(hash)
 		const node = (await parser.parse(contentFromUrl))[0];
 		
 		// Make navigation
-		const navigation = await makeNavigation(hash, parser);
+		const navigation = await makeNavigation(hash, parser, node);
 
 		// Transform page
 		transform(node, navigation);
