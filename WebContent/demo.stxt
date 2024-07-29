@@ -40,10 +40,16 @@ Document (globalcampus.site/namespace.stxt): Demo aplicación
 		Este es el ejemplo anterior de internacionalización,
 		en el que hacíamos que la forma compactada fuera la misma.
 		
+	Math:
 		When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
 		$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 		
-	plantuml:
+	Content: Otro texto en math
+	Math:
+		When `a != 0`, there are two solutions to `ax^2 + bx + c = 0` and they are
+		`x = (-b +- sqrt(b^2-4ac))/(2a) .`
+		
+	Plantuml:
 		@startuml
 			Bob -> Alice
 			Alice -> Bob

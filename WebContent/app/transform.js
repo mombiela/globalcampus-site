@@ -44,6 +44,10 @@ function renderChild(child, parent)
 	{
 		$("<div>").html(marked.parse(text)).appendTo(parent);
 	}
+	else if(name == "math")
+	{
+		$("<div>").text(text).appendTo(parent);
+	}
 	else if(name == "alert")
 	{
 		$("<div class='alerta'>").html(marked.parse(text)).appendTo(parent);
