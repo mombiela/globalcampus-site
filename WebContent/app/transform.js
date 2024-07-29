@@ -72,7 +72,7 @@ function renderChild(child, parent)
 			ch.appendTo(ul);
 		}		
 	}
-	else if(name == "menu" || name=="title")
+	else if(name == "menu" || name=="title" || name == "metadata")
 	{
 		// No hacemos nada
 	}
