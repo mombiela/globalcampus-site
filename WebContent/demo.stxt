@@ -34,11 +34,14 @@ Document (globalcampus.site/namespace.stxt): Demo aplicación
 		Esto es un alert
 					
 	Content:
-		Decimos que dos ##gramáticas## son equivalentes si cualquier documento
+		Decimos que dos ##gramáticas## son equivalentes si cualquier documento @@STxT@@
 		tiene la misma forma compactada; a excepción del namespace del primer nodo.
 		
 		Este es el ejemplo anterior de internacionalización,
 		en el que hacíamos que la forma compactada fuera la misma.
+		
+		When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+		$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 		
 	plantuml:
 		@startuml
