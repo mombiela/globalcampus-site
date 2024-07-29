@@ -3,7 +3,7 @@ Document (globalcampus.site/namespace.stxt): Demo aplicación
 	Header:	Cabecera primer nivel
 	Subheader:	Cabecera segundo nivel
 	
-	text:
+	Content:
 		Esto es un texto normal en formato wiki.
 		
 		Hola mundo, otra tabla\
@@ -32,7 +32,7 @@ Document (globalcampus.site/namespace.stxt): Demo aplicación
 	alert:
 		Esto es un alert
 					
-	text:
+	Content:
 		Decimos que dos ##gramáticas## son equivalentes si cualquier documento
 		tiene la misma forma compactada; a excepción del namespace del primer nodo.
 		

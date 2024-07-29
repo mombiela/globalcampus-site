@@ -40,7 +40,7 @@ function renderChild(child, parent)
 	{
 		$("<h2>").text(text).appendTo(parent);
 	}
-	else if(name == "text")
+	else if(name == "content")
 	{
 		$("<div>").html(marked.parse(text)).appendTo(parent);
 	}
