@@ -8,7 +8,7 @@ Document (globalcampus.site/namespace.stxt):
 		Link: (#demo) Demo
 		Link: (#contacto) Contactar
 		
-	Header: Webs asociadas
+	Header: Proyectos asociados
 	Content:
 		* [Tech Wizard Academy](#github/mombiela/techwizard-academy/WebContent/)
 		* [Semantic Text](#github/mombiela/stxt-book/es/)
