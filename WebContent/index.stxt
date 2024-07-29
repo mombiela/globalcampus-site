@@ -1,12 +1,13 @@
-Index(globalcampus.site/namespace.stxt):
+Document (globalcampus.site/namespace.stxt):
 	Title: GlobalCampus.site
 	Menu:
 		Link: (#tech_docs) Documentación
 		Link: (editor.html) Editor
 		Link: (#demo) Demo
 		
-	Section: Webs asociadas 
-		Link: (#github/mombiela/techwizard-academy/WebContent/) Tech Wizard Academy
-		Link: (#github/mombiela/stxt-book/es/home) Semantic Text Web
-		Link: (#home) Home STXT
+	Header: Webs asociadas
+	Content:
+		* [Tech Wizard Academy](#github/mombiela/techwizard-academy/WebContent/)
+		* [Semantic Text Web](#github/mombiela/stxt-book/es/home)
+		* [Home STXT](#home)
 		

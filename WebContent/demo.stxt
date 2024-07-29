@@ -11,10 +11,11 @@ Document (globalcampus.site/namespace.stxt): Demo aplicación
 		
 		**Esto es negrita**	y _Esto es cursiva_\
 		y ```Esto es un código```. Se puede hacer un salto de línea seguido:\
-		Ahora un ejemplo de una lista:
+		Ahora un ejemplo de una lista (y un link):
 		
 		* Elem 1
 		* Elem 2
+		* [Semantic Text Web](#github/mombiela/stxt-book/es/home)
 	
 	code:
 		Actress (www.example.com/actress.stxt):

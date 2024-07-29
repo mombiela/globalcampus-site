@@ -35,13 +35,23 @@ export async function makeNavigation(hash, parser, mainNode)
 		// Title
 		// -----
 		
+		let title;
 		try
 		{
-			result['title'] = indexNode.getChild("title").getText();
+			title = mainNode.getChild("title").getText();
 		}
 		catch(e)
 		{
 		}
+		try
+		{
+			if (!title || title == "") title = indexNode.getChild("title").getText();
+		}
+		catch(e)
+		{
+		}
+		result['title'] = title;
+		
 		
 		// ------------
 		// Hilo Ariadna
