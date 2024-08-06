@@ -59,6 +59,14 @@ export function getUrlFromHash(hashIni)
 	return stxtUrl;
 }
 
+export function getHash()
+{
+	let hash = window.location.hash || "#index";
+	if (hash.endsWith("/")) hash = hash + "index";
+	console.log("HASH = " + hash);
+	return hash;
+}
+
 function obtenerBaseURL() {
     const url = window.location;
     return `${url.protocol}//${url.host}`;

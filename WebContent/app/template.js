@@ -57,7 +57,7 @@ export const mainEditor = `
 	<div id="editor_window" class="container-fluid">
 		<div class="row">
 			<div class="col-12 p-2">
-				<textarea class="w-100" rows="20"></textarea>
+				<textarea class="w-100" rows="20" id="editor_textarea"></textarea>
 			</div>
 		</div>
 		<div class="row">

@@ -1,7 +1,7 @@
 import { NamespaceRetriever, STXTParser, getUrlContent } from '../js/stxt-parser.min.js';
 import { transform } from './transform.js';
 import { makeNavigation } from './navigation.js';
-import { getUrlFromHash } from './utils.js';
+import { getUrlFromHash, getHash } from './utils.js';
 
 document.addEventListener("DOMContentLoaded", ContentLoaded);
 
@@ -79,12 +79,5 @@ export async function buildContent(content, stxtUrl)
 	window["mathReload"]();
 }
 
-function getHash()
-{
-	let hash = window.location.hash || "#index";
-	if (hash.endsWith("/")) hash = hash + "index";
-	console.log("HASH = " + hash);
-	return hash;
-}
 
 
