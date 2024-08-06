@@ -53,3 +53,23 @@ export const mainConent = `
 	</div>
 `;
 
+export const mainEditor = `
+	<div id="editor_window" class="container-fluid">
+		<div class="row">
+			<div class="col-12 p-2">
+				<textarea class="w-100" rows="20"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<button>Button 1</button>
+				<button>Button 2</button>
+				<button>Button 3</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+			</div>
+		</div>
+	</div>
+`;
