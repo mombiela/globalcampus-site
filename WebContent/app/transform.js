@@ -1,5 +1,6 @@
 import { mainConent } from './template.js';
 import { LineSplitter } from '../js/stxt-parser.min.js';
+import { purify } from './utils.js';
 
 export function transform(node, navigation) 
 {
@@ -42,7 +43,7 @@ function renderChild(child, parent)
 	}
 	else if(name == "content")
 	{
-		$("<div>").html(marked.parse(text)).appendTo(parent);
+		$("<div>").html(purify(marked.parse(text))).appendTo(parent);
 	}
 	else if(name == "math")
 	{
@@ -50,11 +51,11 @@ function renderChild(child, parent)
 	}
 	else if(name == "alert")
 	{
-		$("<div class='alerta'>").html(marked.parse(text)).appendTo(parent);
+		$("<div class='alerta'>").html(purify(marked.parse(text))).appendTo(parent);
 	}
 	else if(name == "assert")
 	{
-		$("<div class='assert'>").html(marked.parse(text)).appendTo(parent);
+		$("<div class='assert'>").html(purify(marked.parse(text))).appendTo(parent);
 	}
 	else if(name == "code")
 	{
