@@ -17,10 +17,10 @@ async function ContentLoaded()
 // Función para cargar la página correcta basada en el hash
 async function loadPage() 
 {
-    await buildContentFromHash();
+    await buildContentFromHashUrl();
 }
 
-async function buildContentFromHash()
+async function buildContentFromHashUrl()
 {
     const content = $("#content");
     content.empty();
