@@ -17,44 +17,19 @@ async function ContentLoaded()
 // Función para cargar la página correcta basada en el hash
 async function loadPage() 
 {
-    const hash = window.location.hash || "#index";
-    await buildContent(hash);
+    await buildContentFromHash();
 }
 
-async function buildContent(hash)
+async function buildContentFromHash()
 {
     const content = $("#content");
     content.empty();
 	try
 	{
-		let ts = "?ts=" + new Date().getTime(); // TODO Revisar uso
-		let grammar = await getUrlContent("/namespace.stxt" + ts);
-		
-		// Obtenemos content
-		if (hash.endsWith("/")) hash = hash + "index";
-		console.log("HASH = " + hash);
+	    const hash = getHash();
 		let stxtUrl = getUrlFromHash(hash);
-		let contentFromUrl = await getUrlContent(stxtUrl + ts);
-		
-		// Final
-	    const namespaceRetriever = new NamespaceRetriever();
-		await namespaceRetriever.addGrammarDefinition(grammar);
-		
-		const parser = new STXTParser(namespaceRetriever);
-		const node = (await parser.parse(contentFromUrl))[0];
-		
-		// Make navigation
-		const navigation = await makeNavigation(hash, parser, node);
-
-		// Transform page
-		transform(node, navigation);
-		plantuml_runonce();
-		
-		// Insertamos en fuente
-		$("#link_source_code").attr("href", stxtUrl);
-		
-		// Mathjax
-		window["mathReload"]();
+		let contentFromUrl = await getUrlContent(stxtUrl);
+		await buildContent(contentFromUrl, stxtUrl);
 	}
 	catch(exception)
 	{
@@ -62,4 +37,54 @@ async function buildContent(hash)
 		content.append($("<pre>").text("Page definition not valid: " + exception));
 	}
 }
+export async function buildContentFromString(str)
+{
+    const content = $("#content");
+    content.empty();
+	try
+	{
+	    const hash = getHash();
+		let stxtUrl = getUrlFromHash(hash);
+		await buildContent(str, stxtUrl);
+	}
+	catch(exception)
+	{
+		console.log("Error: " + exception);
+		content.append($("<pre>").text("Page definition not valid: " + exception));
+	}
+}
+
+export async function buildContent(content, stxtUrl)
+{
+	let grammar = await getUrlContent("/namespace.stxt");
+	
+	// Final
+    const namespaceRetriever = new NamespaceRetriever();
+	await namespaceRetriever.addGrammarDefinition(grammar);
+	
+	const parser = new STXTParser(namespaceRetriever);
+	const node = (await parser.parse(content))[0];
+	
+	// Make navigation
+	const navigation = await makeNavigation(getHash(), parser, node);
+
+	// Transform page
+	transform(node, navigation);
+	plantuml_runonce();
+	
+	// Insertamos en fuente
+	$("#link_source_code").attr("href", stxtUrl);
+	
+	// Mathjax
+	window["mathReload"]();
+}
+
+function getHash()
+{
+	let hash = window.location.hash || "#index";
+	if (hash.endsWith("/")) hash = hash + "index";
+	console.log("HASH = " + hash);
+	return hash;
+}
+
 
