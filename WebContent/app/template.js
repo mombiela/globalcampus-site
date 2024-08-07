@@ -62,7 +62,8 @@ export const mainEditor = `
 		</div>
 		<div class="row">
 			<div class="col-6">
-				<button>Copy Code</button>
+				<button>Refresh</button>
+				<button>Copy Text</button>
 				<button>Reset LOCAL</button>
 			</div>
 			<div class="col-6 text-end">
