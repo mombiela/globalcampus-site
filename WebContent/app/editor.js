@@ -5,6 +5,8 @@ import { buildContentFromString } from './build.js';
 
 document.addEventListener("DOMContentLoaded", ContentLoaded);
 
+let lastVal = "";
+
 async function ContentLoaded()
 {
     // Escuchar los cambios en el hash de la URL
@@ -20,8 +22,6 @@ async function loadPage()
     await initEditor();
 }
 
-let lastVal = "";
-
 async function initEditor()
 {
 	$("#editor").html(mainEditor);
@@ -29,27 +29,32 @@ async function initEditor()
     const hash = getHash();
 	let stxtUrl = getUrlFromHash(hash);
 	let contentFromUrl = await getUrlContent(stxtUrl);
-	lastVal = contentFromUrl;
+	
+	updateContent(contentFromUrl);
 
 	$("#editor_textarea").val(contentFromUrl);
     $("#editor_textarea").keydown(keyDownText);
     $("#editor_textarea").on('click keyup', keyUpText);    
 }
 
+async function updateContent(value)
+{
+	if (lastVal != value)
+	{
+		lastVal = value;
+    	await buildContentFromString(value);
+    }
+}
+
 async function keyUpText(e) 
 {
     if (e.type === 'click' || e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'Home' || e.key === 'End') 
     {
-        var value = $(this).val();
-		if (lastVal != value)
-		{
-			lastVal = value;
-        	await buildContentFromString(value);
-        }
+		updateContent($(this).val());
     }
 }
 
-function keyDownText(e) 
+function keyDownText(e)
 {
     if (e.key === 'Tab') {
         e.preventDefault();

@@ -4,9 +4,8 @@ Document (globalcampus.site/namespace.stxt):
 	
 	Menu:
 		Link: (/#tech_docs) Documentación
-		Link: (/editor.html#demo) Editor
 		Link: (/#demo) Demo
-		Link: (/#contacto) Contactar
+		Link: (/editor.html#demo) Editor
 		
 	Header: Proyectos asociados
 	Content:
