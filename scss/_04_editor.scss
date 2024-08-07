@@ -2,14 +2,25 @@
 	position: fixed;
 	right: 10px;
 	top: 10px;
-	width: 900px;
-	height: 600px;
-	background-color: rgba(#000000, 0.8);
+	width: 960px;
+	height: 560px;
+	background-color: #3937a3;
 	border-radius: 10px;
+	border: 2px solid white;
 }
 
 #editor_textarea {
 	font-family: monospace;
 	tab-size: 4;
     -moz-tab-size: 4;	
+}
+
+button 
+{
+	color: #3937a3;
+	background-color: white;
+	padding: 0 15px;
+	border: 1px solid white;
+	border-radius: 3px;
+	margin-right: 6px;
 }
