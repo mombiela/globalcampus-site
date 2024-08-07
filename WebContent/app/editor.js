@@ -3,6 +3,8 @@ import { getUrlFromHash, getHash } from './utils.js';
 import { getUrlContent } from '../js/stxt-parser.min.js';
 import { buildContentFromString } from './app.js';
 
+let lastVal = "";
+
 $(document).ready(function(){
 	initEditor();
 });
@@ -14,19 +16,18 @@ async function initEditor()
     const hash = getHash();
 	let stxtUrl = getUrlFromHash(hash);
 	let contentFromUrl = await getUrlContent(stxtUrl);
+	lastVal = contentFromUrl;
 
 	$("#editor_textarea").val(contentFromUrl);
-
     $("#editor_textarea").keydown(keyDownText);
     $("#editor_textarea").on('click keyup', keyUpText);    
 }
 
-let lastVal = "";
 async function keyUpText(e) 
 {
-    if (e.type === 'click' || e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'Home' || e.key === 'End') {
+    if (e.type === 'click' || e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'Home' || e.key === 'End') 
+    {
         var value = $(this).val();
-
 		if (lastVal != value)
 		{
 			lastVal = value;
