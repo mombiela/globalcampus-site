@@ -1,4 +1,4 @@
-import { mainEditor } from './template.js';
+import { mainEditor, docTemplate } from './template.js';
 import { getUrlFromHash, getHash } from './utils.js';
 import { getUrlContent } from '../js/stxt-parser.min.js';
 import { buildContentFromString } from './build.js';
@@ -26,13 +26,21 @@ async function initEditor()
 {
 	$("#editor").html(mainEditor);
 	
-    const hash = getHash();
-	let stxtUrl = getUrlFromHash(hash);
-	let contentFromUrl = await getUrlContent(stxtUrl);
+	let contentText = docTemplate; // Template
 	
-	updateContent(contentFromUrl);
+   	const hash = getHash();
+	let stxtUrl = getUrlFromHash(hash);
+	try
+	{
+		contentText = await getUrlContent(stxtUrl);
+	}
+	catch(e)
+	{
+		console.log("Error loading content from: " + stxtUrl);		
+	}
 
-	$("#editor_textarea").val(contentFromUrl);
+	updateContent(contentText);
+	$("#editor_textarea").val(contentText);
     $("#editor_textarea").keydown(keyDownText);
     $("#editor_textarea").on('click keyup', keyUpText);    
 }

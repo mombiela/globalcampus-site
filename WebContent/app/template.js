@@ -81,3 +81,16 @@ export const mainEditor = `
 		</div>
 	</div>
 `;
+
+export const docTemplate = `Document (globalcampus.site/namespace.stxt): Insert a name
+
+	Header:	This is a header
+	Subheader: This is a subheader
+	
+	Content:
+		This is a content, **wiki format!!**
+`;
+
+
+
+
