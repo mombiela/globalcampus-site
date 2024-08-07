@@ -10,11 +10,16 @@
 }
 
 #editor.min {
-	background-color: red;
+	height: 60px;
+	#editor_textarea {
+		display:none;
+	}
 }
 
 #editor.max {
-	background-color: yellow;
+	left: 10px;
+	right: 10px;
+	width: auto;
 }
 
 
