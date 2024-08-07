@@ -23,7 +23,7 @@ async function loadPage()
 async function buildContentFromHashUrl()
 {
     const content = $("#content");
-    content.empty();
+    //content.empty();
 	try
 	{
 	    const hash = getHash();

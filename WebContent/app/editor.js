@@ -25,17 +25,11 @@ let lastVal = "";
 async function keyUpText(e) 
 {
     if (e.type === 'click' || e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'Home' || e.key === 'End') {
-        var start = this.selectionStart;
         var value = $(this).val();
-        var lineStart = value.lastIndexOf('\n', start - 1) + 1;
-        var lineEnd = value.indexOf('\n', start);
-        if (lineEnd === -1) lineEnd = value.length;
-        var currentLine = value.substring(lineStart, lineEnd);
 
 		if (lastVal != value)
 		{
 			lastVal = value;
-        	console.log("El cursor se movió a una nueva línea: " + currentLine);
         	await buildContentFromString(value);
         }
     }
