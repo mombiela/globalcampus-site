@@ -58,6 +58,10 @@ export async function buildContent(content, stxtUrl)
 	// Insertamos en fuente
 	$("#link_source_code").attr("href", stxtUrl);
 	
+	// Insertamos editor
+	let hash = getHash();
+	$("#link_editor").attr("href", "/edit.html" + hash);
+	
 	// Mathjax
 	window["mathReload"]();
 }

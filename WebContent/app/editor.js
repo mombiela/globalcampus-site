@@ -51,6 +51,9 @@ async function updateContent(value)
 	{
 		lastVal = value;
     	await buildContentFromString(value);
+    	
+		$("#link_editor").remove();
+		$("#link_source_code").remove();
     }
 }
 
