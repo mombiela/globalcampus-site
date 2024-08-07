@@ -3,11 +3,24 @@ import { getUrlFromHash, getHash } from './utils.js';
 import { getUrlContent } from '../js/stxt-parser.min.js';
 import { buildContentFromString } from './build.js';
 
-let lastVal = "";
+document.addEventListener("DOMContentLoaded", ContentLoaded);
 
-$(document).ready(function(){
-	initEditor();
-});
+async function ContentLoaded()
+{
+    // Escuchar los cambios en el hash de la URL
+    window.addEventListener("hashchange", loadPage);
+
+    // Cargar la página correcta al cargar la página inicial
+    await loadPage();
+} 
+
+// Función para cargar la página correcta basada en el hash
+async function loadPage() 
+{
+    await initEditor();
+}
+
+let lastVal = "";
 
 async function initEditor()
 {
