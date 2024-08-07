@@ -21,8 +21,8 @@ export const mainConent = `
 			</div>
 			<div class="col-2 text-end">
 				<span class="p-0 m-0" id="source_page">
-					<a id="link_editor" href="" target="_blank" title="Edit page local">EDIT</a>
-					<a id="link_source_code" href="" target="" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a>
+					<a id="link_editor" href="" title="Edit page local navigator">&#128221;</a>
+					<a id="link_source_code" href="" target="_blank" title="Source STxT">&#128270;</a>
 				</span>
 			</div>
 		</div>
