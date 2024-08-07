@@ -1,6 +1,7 @@
 import { mainEditor } from './template.js';
 import { getUrlFromHash, getHash } from './utils.js';
 import { getUrlContent } from '../js/stxt-parser.min.js';
+import { buildContentFromString } from './app.js';
 
 $(document).ready(function(){
 	initEditor();
@@ -20,7 +21,8 @@ async function initEditor()
     $("#editor_textarea").on('click keyup', keyUpText);    
 }
 
-function keyUpText(e) 
+let lastVal = "";
+async function keyUpText(e) 
 {
     if (e.type === 'click' || e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'Home' || e.key === 'End') {
         var start = this.selectionStart;
@@ -30,7 +32,12 @@ function keyUpText(e)
         if (lineEnd === -1) lineEnd = value.length;
         var currentLine = value.substring(lineStart, lineEnd);
 
-        console.log("El cursor se movió a una nueva línea: " + currentLine);
+		if (lastVal != value)
+		{
+			lastVal = value;
+        	console.log("El cursor se movió a una nueva línea: " + currentLine);
+        	await buildContentFromString(value);
+        }
     }
 }
 
