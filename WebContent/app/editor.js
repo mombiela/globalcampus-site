@@ -38,11 +38,22 @@ async function initEditor()
 	{
 		console.log("Error loading content from: " + stxtUrl);		
 	}
+	
+	let localContent = localStorage.getItem(hash);
+	if (localContent && localContent.length>0) contentText = localContent; 
 
 	updateContent(contentText);
 	$("#editor_textarea").val(contentText);
     $("#editor_textarea").keydown(keyDownText);
     $("#editor_textarea").on('click keyup', keyUpText);    
+    
+	$("#btn_refresh").click(makeRefresh);
+	$("#btn_copy_text").click(makeCopyText);
+	$("#btn_reset_local").click(makeResetLocal);
+	$("#btn_min").click(makeMin);
+	$("#btn_max").click(makeMax);
+	$("#btn_normal").click(makeNormal);
+	$("#btn_close").click(makeClose);
 }
 
 async function updateContent(value)
@@ -50,11 +61,19 @@ async function updateContent(value)
 	if (lastVal != value)
 	{
 		lastVal = value;
+		updateLocalStorage(value);
     	await buildContentFromString(value);
     	
 		$("#link_editor").remove();
 		$("#link_source_code").remove();
     }
+}
+
+function updateLocalStorage(value)
+{
+	const hash = getHash();
+	console.log("HASH LOCAL = " + hash);
+	localStorage.setItem(hash, value);
 }
 
 async function keyUpText(e) 
@@ -105,3 +124,40 @@ function keyDownText(e)
         this.selectionStart = this.selectionEnd = start + 1 + leadingWhitespace.length;
     }
 }
+
+// -------------
+// Buttons click
+// -------------
+
+function makeRefresh (){
+	alert("makeRefresh not implemented");
+}
+
+function makeCopyText (){
+	alert("makeCopyText not implemented");
+}
+
+function makeResetLocal (){
+	alert("makeResetLocal not implemented");
+}
+
+function makeMin (){
+	alert("makeMin not implemented");
+}
+
+function makeMax (){
+	alert("makeMax not implemented");
+}
+
+function makeNormal (){
+	alert("makeNormal not implemented");
+}
+
+function makeClose (){
+	alert("not implemented");
+}
+
+
+
+
+

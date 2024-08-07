@@ -63,18 +63,18 @@ export const mainEditor = `
 		</div>
 		<div class="row">
 			<div class="col-3">
-				<button>Refresh</button>
+				<button id="btn_refresh">Refresh</button>
 				<input type="checkbox"> <span style="color:white;">Auto</span>
 			</div>
 			<div class="col-4 text-center">
-				<button>Copy Text</button>
-				<button>Reset LOCAL</button>
+				<button id="btn_copy_text">Copy Text</button>
+				<button id="btn_reset_local">Reset LOCAL</button>
 			</div>
 			<div class="col-5 text-end">
-				<button>MIN</button>
-				<button>MAX</button>
-				<button>NORMAL</button>
-				<button>CLOSE</button>
+				<button id="btn_min">MIN</button>
+				<button id="btn_max">MAX</button>
+				<button id="btn_normal">NORMAL</button>
+				<button id="btn_close">CLOSE</button>
 			</div>
 		</div>
 		<div class="row">
