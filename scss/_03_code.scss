@@ -10,6 +10,8 @@ tt,code {
 	border: 1px solid #aaf;
 	background-color: #ddf;
 	color: #111;
+	tab-size: 4;
+    -moz-tab-size: 4;	
 }
 
 .copy_button {
@@ -22,6 +24,8 @@ pre.code {
 	background-color: #f2f2f2;
 	padding: 10px;
 	border: 1px solid #d9d9d9;
+	tab-size: 4;
+    -moz-tab-size: 4;	
 	
 	strong {
 		color: #111;
