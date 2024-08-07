@@ -6,7 +6,7 @@ import { getUrlFromHash, getHash } from './utils.js';
 export async function buildContentFromHashUrl()
 {
     const content = $("#content");
-    //content.empty();
+    content.empty();
 	try
 	{
 	    const hash = getHash();
