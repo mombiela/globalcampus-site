@@ -72,8 +72,8 @@ export const mainEditor = `
 			</div>
 			<div class="col-5 text-end">
 				<button id="btn_min">MIN</button>
-				<button id="btn_max">MAX</button>
 				<button id="btn_normal">NORMAL</button>
+				<button id="btn_max">MAX</button>
 				<button id="btn_close">CLOSE</button>
 			</div>
 		</div>

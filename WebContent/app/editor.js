@@ -52,7 +52,7 @@ async function initEditor()
 	$("#btn_reset_local").click(makeResetLocal);
 	$("#btn_min").click(makeMin);
 	$("#btn_max").click(makeMax);
-	$("#btn_normal").click(makeNormal);
+	$("#btn_normal").click(makeNormal).hide();
 	$("#btn_close").click(makeClose);
 }
 
@@ -150,14 +150,24 @@ function makeResetLocal (){
 
 function makeMin (){
 	$("#editor").addClass("min").removeClass("max");
+	$("#btn_min").hide();
+	$("#btn_max").show();
+	$("#btn_normal").show();
+	
 }
 
 function makeMax (){
 	$("#editor").addClass("max").removeClass("min");
+	$("#btn_min").show();
+	$("#btn_max").hide();
+	$("#btn_normal").show();
 }
 
 function makeNormal (){
 	$("#editor").removeClass("max").removeClass("min");
+	$("#btn_min").show();
+	$("#btn_max").show();
+	$("#btn_normal").hide();
 }
 
 function makeClose () {
