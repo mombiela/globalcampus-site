@@ -58,6 +58,8 @@ async function initEditor()
 
 async function updateContent(value)
 {
+	if (!value) value = $("#editor_textarea").val();
+	
 	if (lastVal != value)
 	{
 		lastVal = value;
@@ -72,7 +74,6 @@ async function updateContent(value)
 function updateLocalStorage(value)
 {
 	const hash = getHash();
-	console.log("HASH LOCAL = " + hash);
 	localStorage.setItem(hash, value);
 }
 
@@ -130,7 +131,7 @@ function keyDownText(e)
 // -------------
 
 function makeRefresh (){
-	alert("makeRefresh not implemented");
+	updateContent();
 }
 
 function makeCopyText (){
@@ -153,8 +154,10 @@ function makeNormal (){
 	alert("makeNormal not implemented");
 }
 
-function makeClose (){
-	alert("not implemented");
+function makeClose () {
+	updateContent();
+	const hash = getHash();
+	window.location.href = "/" + hash;
 }
 
 
