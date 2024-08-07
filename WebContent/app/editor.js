@@ -135,11 +135,17 @@ function makeRefresh (){
 }
 
 function makeCopyText (){
-	alert("makeCopyText not implemented");
+	navigator.clipboard.writeText($("#editor_textarea").val());
+	alert("Copied!");
 }
 
 function makeResetLocal (){
-	alert("makeResetLocal not implemented");
+	const hash = getHash();
+	if (confirm("Reset local values?"))
+	{
+		localStorage.removeItem(hash);		
+		window.location.href = "/" + hash;
+	}
 }
 
 function makeMin (){
