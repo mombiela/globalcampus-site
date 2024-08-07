@@ -16,5 +16,19 @@ async function initEditor()
 
 	$("#editor_textarea").val(contentFromUrl);
 	
-	
+	$("#editor_textarea").keydown(function(e) {
+       if (e.key === 'Tab') {
+            e.preventDefault();
+                    
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            // Set the value of the textarea to: text before caret + tab + text after caret
+            $(this).val($(this).val().substring(0, start) + "\t" + $(this).val().substring(end));
+
+            // Put the caret at the right position again (after the tab)
+            this.selectionStart = this.selectionEnd = start + 1;
+        }
+    });        
 }
+
