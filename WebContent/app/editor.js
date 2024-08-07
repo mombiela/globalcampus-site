@@ -149,15 +149,15 @@ function makeResetLocal (){
 }
 
 function makeMin (){
-	alert("makeMin not implemented");
+	$("#editor").addClass("min").removeClass("max");
 }
 
 function makeMax (){
-	alert("makeMax not implemented");
+	$("#editor").addClass("max").removeClass("min");
 }
 
 function makeNormal (){
-	alert("makeNormal not implemented");
+	$("#editor").removeClass("max").removeClass("min");
 }
 
 function makeClose () {

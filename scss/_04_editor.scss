@@ -9,6 +9,15 @@
 	border: 2px solid white;
 }
 
+#editor.min {
+	background-color: red;
+}
+
+#editor.max {
+	background-color: yellow;
+}
+
+
 #editor_textarea {
 	font-family: monospace;
 	tab-size: 4;
