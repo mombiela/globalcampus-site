@@ -54,6 +54,10 @@ async function initEditor()
 	$("#btn_max").click(makeMax);
 	$("#btn_normal").click(makeNormal).hide();
 	$("#btn_close").click(makeClose);
+	
+	// Auto Refresh storage
+	$("#check_auto_refresh").click(updateAutoRefreshStorage());
+	
 }
 
 async function updateContent(value)
@@ -79,6 +83,8 @@ function updateLocalStorage(value)
 
 async function keyUpText(e) 
 {
+	if(!$('#check_auto_refresh').is(':checked')) return;
+	
     if (e.type === 'click' || e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'Home' || e.key === 'End') 
     {
 		updateContent($(this).val());

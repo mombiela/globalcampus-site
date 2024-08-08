@@ -64,7 +64,7 @@ export const mainEditor = `
 		<div class="row">
 			<div class="col-3">
 				<button id="btn_refresh">Refresh</button>
-				<input type="checkbox"> <span style="color:white;">Auto</span>
+				<input type="checkbox" id="check_auto_refresh"> <span style="color:white;">Auto</span>
 			</div>
 			<div class="col-4 text-center">
 				<button id="btn_copy_text">Copy Text</button>
