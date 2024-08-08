@@ -6,6 +6,7 @@ import { buildContentFromString } from './build.js';
 document.addEventListener("DOMContentLoaded", ContentLoaded);
 
 let lastVal = "";
+const DISABLE_AUTOREFRESH = "DISABLE_AUTOREFRESH";
 
 async function ContentLoaded()
 {
@@ -56,7 +57,8 @@ async function initEditor()
 	$("#btn_close").click(makeClose);
 	
 	// Auto Refresh storage
-	$("#check_auto_refresh").click(updateAutoRefreshStorage());
+	if(!localStorage.getItem(DISABLE_AUTOREFRESH)) $("#check_auto_refresh").attr("checked","true");
+	$("#check_auto_refresh").click(updateAutoRefreshStorage);
 	
 }
 
@@ -182,6 +184,16 @@ function makeClose () {
 	window.location.href = "/" + hash;
 }
 
+function updateAutoRefreshStorage() {
+	if(!$('#check_auto_refresh').is(':checked'))
+	{
+		localStorage.setItem(DISABLE_AUTOREFRESH, "true");
+	}
+	else
+	{
+		localStorage.removeItem(DISABLE_AUTOREFRESH);
+	}
+}
 
 
 
