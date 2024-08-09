@@ -10,7 +10,7 @@ export const mainConent = `
 				<h2><a href="/">GlobalCampus.site</a> & <a href="https://semantictext.info">SemanticText</a></h2>
 			</div>
 			<div class="col-6 text-end text-bottom">
-				<a href="/#objective">Nuestro Objetivo</a> | 
+				<a href="/#objective">Nuestros Objetivos</a> | 
 				<a href="/#contact">Contactar</a> | 
 				<a href="/#conditions">Condiciones</a> 
 			</div>
