@@ -54,17 +54,41 @@ export async function buildContent(content, stxtUrl)
 	// Transform page
 	transform(node, navigation);
 	plantuml_runonce();
-	
+
 	// Insertamos en fuente
 	$("#link_source_code").attr("href", stxtUrl);
 	
 	// Insertamos editor
 	let hash = getHash();
 	$("#link_editor").attr("href", "/edit.html" + hash);
+
+	// Fix de url's relatvias
+	fixUrlsRelativas();
 	
 	// Mathjax
 	window["mathReload"]();
 }
 
+function fixUrlsRelativas()
+{
+	$('a').each(function() {
+        var href = $(this).attr('href');
 
+        // Verifica si la URL no empieza por "http://", "https://", o "/"
+        if (href && !href.startsWith('http://') && !href.startsWith('https://') && !href.startsWith('/') && !href.startsWith('.')) {
+			
+            // Obtener la URL actual
+            var currentUrl = window.location.href;
+            let i = currentUrl.lastIndexOf("/");
+            if (i != -1)
+            {
+	            // Concatena la URL actual con el href relativo
+	            var newUrl = currentUrl.substring(0,i+1) + href;
+	
+	            // Actualiza el atributo href con la nueva URL
+	            $(this).attr('href', newUrl);
+			}
+        }
+    });
+}
 
