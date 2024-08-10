@@ -31,12 +31,13 @@ export const mainConent = `
 	</div>
 	<div class="container-xxl" id="main_content">
 		<div class="row">
-			<div class="col-12 col-lg-8">
+			<div class="col-12 col-lg-8xx">
 				<div id="nav1" class="navigation"></div>
 				<div id="inner_content"></div>
 				<div id="nav2" class="navigation"></div>
 			</div>
-			<div class="col-12 col-lg-4 publi">
+			<!--
+			<div class="col-12 col-lg-4xx publi">
 				<p>
 					Aquí va la publicidad.<br>
 					Aquí va la publicidad.<br>
@@ -45,6 +46,7 @@ export const mainConent = `
 					Aquí va la publicidad.<br>
 				</p>
 			</div>
+			-->
 		</div>
 	</div>
 	<div class="container-xxl mt-3" id="footer">
