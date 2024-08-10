@@ -75,7 +75,13 @@ function fixUrlsRelativas()
         var href = $(this).attr('href');
 
         // Verifica si la URL no empieza por "http://", "https://", o "/"
-        if (href && !href.startsWith('http://') && !href.startsWith('https://') && !href.startsWith('/') && !href.startsWith('.')) {
+        if (href 
+        	&& !href.startsWith('http://') 
+        	&& !href.startsWith('https://') 
+        	&& !href.startsWith('/') 
+        	&& !href.startsWith('#') 
+        	&& !href.startsWith('.')) 
+        {
 			
             // Obtener la URL actual
             var currentUrl = window.location.href;
