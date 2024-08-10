@@ -31,22 +31,19 @@ export const mainConent = `
 	</div>
 	<div class="container-xxl" id="main_content">
 		<div class="row">
-			<div class="col-12 col-lg-8xx">
+			<div class="col-12 col-lg-8">
 				<div id="nav1" class="navigation"></div>
 				<div id="inner_content"></div>
 				<div id="nav2" class="navigation"></div>
 			</div>
-			<!--
-			<div class="col-12 col-lg-4xx publi">
+			<div class="col-12 col-lg-4 publi">
 				<p>
-					Aquí va la publicidad.<br>
-					Aquí va la publicidad.<br>
-					Aquí va la publicidad.<br>
-					Aquí va la publicidad.<br>
-					Aquí va la publicidad.<br>
+					Este espacio está destinado a publicidad.<br>
+					Si quieres ser un patrocinador nuestro <a href="#contact">contacta con nosotros</a>
+					y podrás incluir enlaces en esta zona.					
 				</p>
+				<p><strong>¡Gracias por colaborar!</strong></p>
 			</div>
-			-->
 		</div>
 	</div>
 	<div class="container-xxl mt-3" id="footer">
