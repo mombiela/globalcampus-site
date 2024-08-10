@@ -38,7 +38,9 @@ export const mainConent = `
 			</div>
 			<div class="col-12 col-lg-4 publi">
 				<p>
-					Este espacio está destinado a publicidad.<br>
+					Este espacio está destinado a publicidad.
+				</p>
+				<p>
 					Si quieres ser un patrocinador nuestro <a href="#contact">contacta con nosotros</a>
 					y podrás incluir enlaces en esta zona.					
 				</p>
