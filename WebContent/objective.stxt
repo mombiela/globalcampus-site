@@ -1,4 +1,20 @@
 Document (globalcampus.site/namespace.stxt): Nuestros objetivos
 
 	Content:
-		This is a content
+		Tenemos varios objetivos al hacer este portal. Intentaremos explicarlos:
+		
+		* Prueba de concepto para STxT
+		* Prueba de concpeto de MetaPortal
+		* Ayuda efectiva a estudiantes para crear documentación
+		* Ayuda a docentes para crear documentación
+		
+	Header: Prueba de concepto para STxT
+	Content: 
+		Esta puede ser la segunda web que usa STxT, y realmente está vinculada con la original.
+		Es propósito es ver que se puede usar el lenguaje para describir una web. Realmente el 
+		lenguaje permite describir cualquier web o documento estructurado, por lo que hemos querido
+		empezar por algo práctico: un documento docente. Por este mismo motivo el libro donde
+		se explica STxT está escrito en STxT.
+		
+		Para esta parte hemos desarrollado un parseador de STxT, aunque todavía es una
+		versión preliminar.
