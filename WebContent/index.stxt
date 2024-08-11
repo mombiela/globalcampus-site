@@ -7,7 +7,7 @@ Document (globalcampus.site/namespace.stxt):
 		Link: (/#demo) Demo
 		
 	Header: ¡Bienvenidos!
-	Assert: ¡Bienvenidos al primer **Meta Portal** de documentación!
+	Alert: ¡Bienvenidos al primer **Meta Portal** de documentación!
 	Content: 
 		Ya se que parece precipitado, pero lo mejor es que lo probéis directamente
 		[con la documentación](/#docs/). También podéis probar nuestro editor (beta) para ver
