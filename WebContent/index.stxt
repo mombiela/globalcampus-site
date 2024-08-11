@@ -9,7 +9,7 @@ Document (globalcampus.site/namespace.stxt):
 	Alert: ¡Bienvenidos al primer **Meta Portal** de documentación!
 	Content: 
 		Ya se que parece precipitado, pero lo mejor es que lo probéis directamente
-		[con la documentación](/#docs/). También podéis probar nuestro editor (beta) para ver
+		[con la documentación](/#github/mombiela/globalcampus-docs/). También podéis probar nuestro editor (beta) para ver
 		online cambios. El editor es local, los cambios sólo afectan al navegador local
 		mientras se edita, no cambia la visualización normal. 
 		
