@@ -3,8 +3,7 @@ Document (globalcampus.site/namespace.stxt):
 	Title: GlobalCampus.site
 	
 	Menu:
-		Link: (/#docs/) Documentación
-		Link: (/#demo) Demo
+		Link: (/#github/mombiela/globalcampus-docs/) Documentación
 		
 	Header: ¡Bienvenidos!
 	Alert: ¡Bienvenidos al primer **Meta Portal** de documentación!
