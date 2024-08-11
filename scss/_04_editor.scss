@@ -31,10 +31,32 @@
 
 button 
 {
-	color: #3937a3;
-	background-color: white;
-	padding: 0 15px;
+	padding: 2px 15px;
 	border: 1px solid white;
 	border-radius: 3px;
 	margin-right: 6px;
 }
+
+button {
+	background-color: white;
+	color: #3937a3;
+    border-radius: 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #ddf;
+}
+
+button {
+    transition: all 0.05s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+
+
