@@ -10,17 +10,12 @@ Document (globalcampus.site/namespace.stxt):
 	Content:
 		¿Quieres que tu proyecto aparezca aquí? [¡Contacta con nosotros!](#contact)
 		
+		* [Semantic Text (version 2.0, next version)](#github/mombiela/stxt-book/es/)
+		* [Tech Wizard Academy](#github/mombiela/techwizard-academy/WebContent/) 
+		
 		De momento tenemos pocos proyectos asociados, y realmente acabamos de salir.
 		 
 		Este portal pretende mostrar _una apliacación_ de STxT, y como estamos ya 
 		en versión 2.0 y nos falta la documentación, usaremos globalcampus para
 		hacerla y probarlo nosotros mismos. También hemos probado a añadir un proyecto
-		personal sobre un portal técnico. En resumen, que tenemos lo siguiente:
-		
-		* [Semantic Text (version 2.0, next version)](#github/mombiela/stxt-book/es/)
-		* [Tech Wizard Academy](#github/mombiela/techwizard-academy/WebContent/) 
-		
-		
-	
-	
-	
+		personal sobre un portal técnico.
