@@ -34,7 +34,7 @@ export const mainConent = `
 			<div class="col-12 col-lg-8">
 				<div id="nav1" class="navigation"></div>
 				<div id="inner_content"></div>
-				<div id="nav2" class="navigation"></div>
+				<div id="nav2" class="navigation" style="display:none;"></div>
 			</div>
 			<div class="col-12 col-lg-4 publi">
 				<p>
