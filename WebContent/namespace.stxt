@@ -17,7 +17,7 @@ Namespace: globalcampus.site/namespace.stxt
 			author: (?)
 			last modif: (?)
 			id public: (?)
-		Preamble: (?)
+		Preamble: (?) TEXT
 		Header: (*)
 		Subheader: (*)
 		Content: (*) TEXT
