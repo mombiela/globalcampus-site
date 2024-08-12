@@ -57,6 +57,10 @@ function renderChild(child, parent)
 	{
 		$("<div class='assert'>").html(purify(marked.parse(text))).appendTo(parent);
 	}
+	else if(name == "preamble")
+	{
+		$("<div class='preamble'>").html(purify(marked.parse(text))).appendTo(parent);
+	}
 	else if(name == "code")
 	{
 		makeCode(text, parent);
