@@ -7,6 +7,7 @@ Document (globalcampus.site/namespace.stxt): Nuestros objetivos
 		* Prueba de concepto de MetaPortal
 		* Ayuda efectiva a estudiantes para crear documentación
 		* Ayuda a docentes para crear documentación
+		* Crear una wiki global de aprendizaje
 		
 	Header: Prueba de concepto para STxT
 	Content: 
@@ -47,6 +48,11 @@ Document (globalcampus.site/namespace.stxt): Nuestros objetivos
 		este metaportal puede ser una ayuda a todos ellos. Igual que los estudiantes pueden
 		usar este portal para hacer contenidos de una forma sencilla, y publicarlos a internet
 		de forma immediata.
+	Header: Crear una wiki global de aprendizaje
+	Content:
+		El objetivo final es crear una wiki global de aprendizaje descentralizada.
 		
+		Este objetivo es muy ambicioso, pero al ser descentralizada no necesita recursos
+		propios iniciales. Nunca sabremos si esto es posible a no ser que lo intentemos :-D
 	
-		
+	
