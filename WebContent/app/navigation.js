@@ -1,6 +1,8 @@
 import { LineSplitter, getUrlContent } from '../js/stxt-parser.min.js';
 import { getUrlFromHash } from './utils.js';
 
+const DEFAULT_DOC = "_default";
+
 export async function makeNavigation(hash, parser, mainNode) 
 {
 	let result = {};
@@ -9,15 +11,15 @@ export async function makeNavigation(hash, parser, mainNode)
 		console.log("**** NAVIGATION: " + hash);
 		let i = hash.lastIndexOf("/");
 		let currentDoc = hash.substring(i+1);
-		let hashIndex = hash.substring(0, i) + "/index";
+		let hashIndex = hash.substring(0, i) + "/" + DEFAULT_DOC;
 		let last = hash.substring(0,i+1);
 		if (hash.endsWith("/"))
 		{
-		 	hashIndex = hash + "index"; // Índex!!
+		 	hashIndex = hash + DEFAULT_DOC;
 		 	currentDoc = last;	
 		}
 		
-		if (i == -1) hashIndex = "#index"; // Hack para página incicial
+		if (i == -1) hashIndex = "#" + DEFAULT_DOC; // Hack para página incicial
 	
 		console.log("CurrentDoc: " + currentDoc);
 		console.log("hashIndex: " + hashIndex);
