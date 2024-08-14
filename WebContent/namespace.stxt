@@ -2,15 +2,22 @@ Namespace: globalcampus.site/namespace.stxt
 	Menu: (?)
 		Link: (+)
 		
+	Right menu: (?)
+		Link: (+)
+		
 	Index:
 		Title: (?)
+		Subtitle: (?)
 		Menu: (?)
+		Right menu: (?)
 		Section: (+)
 			Link: (+)
 			
 	Document:
 		Title: (?)
+		Subtitle: (?)
 		Menu: (?)
+		Right menu: (?)
 		Metadata:(?)
 			title: (?)
 			description: (?)
