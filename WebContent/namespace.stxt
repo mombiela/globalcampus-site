@@ -8,6 +8,7 @@ Namespace: globalcampus.site/namespace.stxt
 	Index:
 		Title: (?)
 		Subtitle: (?)
+		Footer: (?)
 		Menu: (?)
 		Right menu: (?)
 		Section: (+)
@@ -16,6 +17,7 @@ Namespace: globalcampus.site/namespace.stxt
 	Document:
 		Title: (?)
 		Subtitle: (?)
+		Footer: (?)
 		Menu: (?)
 		Right menu: (?)
 		Metadata:(?)
