@@ -40,20 +40,12 @@ export async function makeNavigation(hash, parser, mainNode)
 		let title;
 		try
 		{
-			title = mainNode.getChild("title").getText();
+			title = indexNode.getChild("title").getText();
 		}
 		catch(e)
 		{
 		}
-		try
-		{
-			if (!title || title == "") title = indexNode.getChild("title").getText();
-		}
-		catch(e)
-		{
-		}
-		result['title'] = title;
-		
+		result['title'] = title;		
 		
 		// ------------
 		// Hilo Ariadna
@@ -62,8 +54,8 @@ export async function makeNavigation(hash, parser, mainNode)
 		let hiloAriadna = [];
 		try
 		{
-			let menu = mainNode.getChild("menu");
-			if (menu == null) menu = indexNode.getChild("menu");
+			let menu = mainNode.getChild("left menu");
+			if (menu == null) menu = indexNode.getChild("left menu");
 			if (menu != null)
 			{
 				let links = menu.getChildsByName("link");
