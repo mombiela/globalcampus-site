@@ -1,31 +1,13 @@
 Namespace: globalcampus.site/namespace.stxt
-	Menu: (?)
-		Link: (+)
-		
-	Right menu: (?)
-		Link: (+)
-		
-	Index:
-		Title: (?)
-		Subtitle: (?)
-		Footer: (?)
-		Menu: (?)
-		Right menu: (?)
-		Section: (+)
-			Link: (+)
-			
 	Document:
-		Title: (?)
-		Subtitle: (?)
-		Footer: (?)
-		Menu: (?)
-		Right menu: (?)
-		Metadata:(?)
-			title: (?)
+		Metadata: (?)
 			description: (?)
 			author: (?)
 			last modif: (?)
 			id public: (?)
+		Navigation: (?)
+			Previous: (?)
+			Next: (?)
 		Preamble: (?) TEXT
 		Header: (*)
 		Subheader: (*)
@@ -35,4 +17,15 @@ Namespace: globalcampus.site/namespace.stxt
 		Alert: (*) TEXT
 		Code: (*) TEXT
 		Plantuml: (*) TEXT
-		
+
+	Default:
+		Title: (?)
+		Subtitle: (?)
+		Footer: (?)
+		Display src: (?) BOOLEAN
+		Display edit: (?) BOOLEAN
+		Left Menu: (?)
+			Link: (+)
+		Right menu: (?)
+			Link: (+)
+
