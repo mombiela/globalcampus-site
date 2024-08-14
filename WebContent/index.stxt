@@ -1,10 +1,5 @@
 Document (globalcampus.site/namespace.stxt):
 
-	Title: GlobalCampus.site
-	
-	Menu:
-		Link: (/#github/mombiela/globalcampus-docs/) Documentación
-		
 	Header: ¡Bienvenidos!
 	Alert: ¡Bienvenidos al primer **Meta Portal** de aprendizaje!
 	Content: 
