@@ -78,44 +78,21 @@ export async function makeNavigation(hash, parser, mainNode)
 		// NEXT y PREV
 		// -----------
 		
-		let allDocs = [];
-		let parts = indexNode.getChildsByName("section");
-		for (let i = 0; i<parts.length; i++)
+		let navigation = mainNode.getChild("navigation");
+		if (navigation)		
 		{
-			let temas = parts[i].getChildsByName("link");
-			for (let j = 0; j<temas.length; j++)
+			let prevNode = navigation.getChild("previous");
+			let nextNode = navigation.getChild("next");
+			
+			if (prevNode)
 			{
-				let tema = temas[j];
-				allDocs.push(tema);
+				result.prev = {url:prevNode.getTextSufix(), descrip: prevNode.getTextCentral()};
+			}
+			if (nextNode)
+			{
+				result.next = {url:nextNode.getTextSufix(), descrip: nextNode.getTextCentral()};
 			}
 		}
-		
-		let lastPart = currentDoc;
-		console.log("LAST PART = " + lastPart);
-		for (let i = 0; i<allDocs.length; i++)
-		{
-			let tema = allDocs[i];
-			let temaUrl = LineSplitter.split(tema.getText()).prefix;
-			if (temaUrl == lastPart)
-			{
-				console.log("TEMA! = " + tema + " -> " + last + lastPart);
-
-				if (i>0)
-				{
-					tema = allDocs[i-1];
-					temaUrl = LineSplitter.split(tema.getText()).prefix;
-					let temaDesc = LineSplitter.split(tema.getText()).centralText;
-					result.prev = {url:last + temaUrl, descrip: temaDesc};
-				}
-				if (i<allDocs.length-1)
-				{
-					tema = allDocs[i+1];
-					temaUrl = LineSplitter.split(tema.getText()).prefix;
-					let temaDesc = LineSplitter.split(tema.getText()).centralText;
-					result.next = {url:last + temaUrl, descrip: temaDesc};
-				}
-			}
-		}				
 		
 	}
 	catch (e)
