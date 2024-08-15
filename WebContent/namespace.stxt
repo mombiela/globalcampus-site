@@ -19,7 +19,7 @@ Namespace: globalcampus.site/namespace.stxt
 		Plantuml: (*) TEXT
 
 	Default:
-		Title: (?)
+		Title: (1)
 		Subtitle: (?)
 		Footer: (?)
 		Display src: (?) BOOLEAN
