@@ -81,7 +81,7 @@ function renderChild(child, parent)
 			ch.appendTo(ul);
 		}		
 	}
-	else if(name == "menu" || name=="title" || name == "metadata")
+	else if(name == "menu" || name=="title" || name == "metadata" || name == "navigation")
 	{
 		// No hacemos nada
 	}
