@@ -1,5 +1,5 @@
 import { NamespaceRetriever, STXTParser, getUrlContent } from '../js/stxt-parser.min.js';
-import { transform } from './transform.js';
+import { transform, fixUrlsRelativas } from './transform.js';
 import { getDefaultValues } from './default.js';
 import { getUrlFromHash, getHash } from './utils.js';
 
@@ -67,35 +67,5 @@ export async function buildContent(content, stxtUrl)
 	
 	// Mathjax
 	window["mathReload"]();
-}
-
-function fixUrlsRelativas()
-{
-	$('a').each(function() {
-        var href = $(this).attr('href');
-
-        // Verifica si la URL no empieza por "http://", "https://", o "/"
-        if (href 
-        	&& !href.startsWith('http://') 
-        	&& !href.startsWith('https://') 
-        	&& !href.startsWith('mailto:') 
-        	&& !href.startsWith('/') 
-        	&& !href.startsWith('#') 
-        	&& !href.startsWith('.')) 
-        {
-			
-            // Obtener la URL actual
-            var currentUrl = window.location.href;
-            let i = currentUrl.lastIndexOf("/");
-            if (i != -1)
-            {
-	            // Concatena la URL actual con el href relativo
-	            var newUrl = currentUrl.substring(0,i+1) + href;
-	
-	            // Actualiza el atributo href con la nueva URL
-	            $(this).attr('href', newUrl);
-			}
-        }
-    });
 }
 
