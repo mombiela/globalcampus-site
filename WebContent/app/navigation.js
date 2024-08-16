@@ -83,14 +83,8 @@ export async function makeNavigation(hash, parser, mainNode)
 			let prevNode = navigation.getChild("previous");
 			let nextNode = navigation.getChild("next");
 			
-			if (prevNode)
-			{
-				result.prev = {url:prevNode.getTextSufix(), descrip: prevNode.getTextCentral()};
-			}
-			if (nextNode)
-			{
-				result.next = {url:nextNode.getTextSufix(), descrip: nextNode.getTextCentral()};
-			}
+			if (prevNode)	result.prev = {url:prevNode.getTextSufix(), descrip: prevNode.getTextCentral()};
+			if (nextNode)	result.next = {url:nextNode.getTextSufix(), descrip: nextNode.getTextCentral()};
 		}
 		
 	}
