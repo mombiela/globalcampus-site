@@ -142,24 +142,6 @@ function replaceWithEmpty(text) {
 
 function insertDefaultValues(defaultValues)
 {
-	// Hilo de ariadna
-	console.log("NAVIGATION: " + JSON.stringify(defaultValues,null,3));
-	const hiloAriadna = $("#hilo_ariadna");
-	const hilo = defaultValues.hilo_ariadna;
-	if (hilo && hilo.length>0)
-	{
-		$("#hilo_ariadna").empty();
-		for (let i = 0; i<hilo.length; i++)
-		{
-			let elem = hilo[i];
-			$(i == 0 ? "<a class='me-3'>": "<a class='mx-3'>").attr("href",elem.url).text(elem.descrip).appendTo(hiloAriadna);
-		}
-	}
-	else
-	{
-		$("#hilo_ariadna").html("&nbsp;");
-	}
-	
 	// Next y prev
 	if (defaultValues.next || defaultValues.prev)
 	{
@@ -191,7 +173,7 @@ function insertDefaultValues(defaultValues)
 	if (defaultValues.footer) 	$("#main_footer").html(purify(marked.parse(defaultValues.footer)));
 	else 						$("#main_footer").hide();
 	
-	if (defaultValues.leftMenu)	$("#hilo_ariadna").html(purifySimple(marked.parse(defaultValues.leftMenu)));
+	if (defaultValues.leftMenu)	$("#left_menu").html(purifySimple(marked.parse(defaultValues.leftMenu)));
 	
 	if (defaultValues.rightMenu) $("#right_menu").html(purifySimple(marked.parse(defaultValues.rightMenu)));
 	

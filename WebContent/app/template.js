@@ -16,7 +16,7 @@ export const mainConent = `
 	<div class="container-xxl p-1 px-3" id="top_bar">
 		<div class="row">
 			<div class="col-10">
-				<span class="p-0 m-0" id="hilo_ariadna"></span>
+				<span class="p-0 m-0" id="left_menu"></span>
 			</div>
 			<div class="col-2 text-end">
 				<span class="p-0 m-0" id="source_page">
