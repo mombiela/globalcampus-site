@@ -23,24 +23,11 @@ export async function getDefaultValues(hash, parser, mainNode)
 		let footer =  indexNode.getChild("footer");
 		if (footer) result['footer'] = footer.getText();
 		
-		// ------------
-		// Hilo Ariadna
-		// ------------
+		let leftMenu = indexNode.getChild("left menu");
+		if (leftMenu) result['leftMenu']  = leftMenu.getText();
 		
-		let hiloAriadna = [];
-		let menu = indexNode.getChild("left menu");
-		if (menu != null)
-		{
-			let links = menu.getChildsByName("link");
-			console.log("LINKS: " + links);
-			for (let i = 0; i<links.length; i++)
-			{
-				let link = links[i];
-				hiloAriadna.push({url: link.getTextSufix(), descrip: link.getTextCentral()});
-			}
-		}
-		
-		result["hilo_ariadna"] = hiloAriadna;
+		let rightMenu = indexNode.getChild("right menu");
+		if (rightMenu) result['rightMenu'] = rightMenu.getText();
 		
 		// -----------
 		// NEXT y PREV

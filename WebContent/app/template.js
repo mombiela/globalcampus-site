@@ -9,10 +9,7 @@ export const mainConent = `
 			<div class="col-6 p-0">
 				<h2 id="main_subtitle"></h2>
 			</div>
-			<div class="col-6 text-end text-bottom">
-				<a href="/#objective">Nuestros Objetivos</a> | 
-				<a href="/#contact">Contactar</a> | 
-				<a href="/#conditions">Condiciones</a> 
+			<div class="col-6 text-end text-bottom" id="right_menu">
 			</div>
 		</div>
 	</div>

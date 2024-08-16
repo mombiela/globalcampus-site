@@ -183,13 +183,17 @@ function insertDefaultValues(defaultValues)
 	
 	// Title, subtitle, footer
 	if (defaultValues.title)	$("#main_title").text(defaultValues.title);
-	else						$("#main_title").text("GlobalCampus");
+	else						$("#main_title").text("GlobalCampus.site");
 	
 	if (defaultValues.subtitle) $("#main_subtitle").html(purifySimple(marked.parse(defaultValues.subtitle)));
-	else 						$("#main_subtitle").html("<a href='/'>GlobalCampus.site</a> & <a href='https://semantictext.info'>SemanticText</a>");
+	else 						$("#main_subtitle").hide();
 	
 	if (defaultValues.footer) 	$("#main_footer").html(purify(marked.parse(defaultValues.footer)));
-	else 						$("#main_footer").html("<p>&copy; 2024 - Este obra está bajo una <a style='text-decoration:underline' rel='license' href='https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE'>Licencia MIT</a>.</p>");
+	else 						$("#main_footer").hide();
+	
+	if (defaultValues.leftMenu)	$("#hilo_ariadna").html(purifySimple(marked.parse(defaultValues.leftMenu)));
+	
+	if (defaultValues.rightMenu) $("#right_menu").html(purifySimple(marked.parse(defaultValues.rightMenu)));
 	
 }
 
