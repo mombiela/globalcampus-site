@@ -29,6 +29,12 @@ export async function getDefaultValues(hash, parser, mainNode)
 		let rightMenu = indexNode.getChild("right menu");
 		if (rightMenu) result['rightMenu'] = rightMenu.getText();
 		
+		let displaySrc = indexNode.getChild("display src");
+		if (!displaySrc || displaySrc.getText() == "true") result.displaySrc = true;
+		
+		let displayEdit = indexNode.getChild("display edit");
+		if (!displayEdit || displayEdit.getText() == "true") result.displayEdit = true;
+		
 		// -----------
 		// NEXT y PREV
 		// -----------

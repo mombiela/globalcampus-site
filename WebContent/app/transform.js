@@ -177,6 +177,8 @@ function insertDefaultValues(defaultValues)
 	
 	if (defaultValues.rightMenu) $("#right_menu").html(purifySimple(marked.parse(defaultValues.rightMenu)));
 	
+	if (!defaultValues.displaySrc) $("#link_source_code").hide();
+	if (!defaultValues.displayEdit) $("#link_editor").hide();
 }
 
 export function fixUrlsRelativas()

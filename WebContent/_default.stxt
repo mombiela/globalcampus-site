@@ -6,6 +6,6 @@ Default (globalcampus.site/namespace.stxt):
 	Left Menu: [Documentación](/#github/mombiela/globalcampus-docs/) 
 	Right Menu: [Objectivos](#objective) | [Contactar](#contact) | [Condiciones](#conditions) 
 	
-	Display src: false
-	Display edit: false
+	Display src: true
+	Display edit: true
 
