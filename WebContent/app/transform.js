@@ -2,7 +2,7 @@ import { mainConent } from './template.js';
 import { LineSplitter } from '../js/stxt-parser.min.js';
 import { purify } from './utils.js';
 
-export function transform(node, navigation) 
+export function transform(node, defaultValues) 
 {
     const content = $("#content");
 
@@ -24,7 +24,7 @@ export function transform(node, navigation)
 	}
 	
 	// Insertamos navegaci�n
-	insertNavigation(navigation);
+	insertDefaultValues(defaultValues);
 }
 
 function renderChild(child, parent)
@@ -140,12 +140,12 @@ function replaceWithEmpty(text) {
 /* Navegaci�n */
 /* ********** */
 
-function insertNavigation(navigation)
+function insertDefaultValues(defaultValues)
 {
 	// Hilo de ariadna
-	console.log("NAVIGATION: " + JSON.stringify(navigation,null,3));
+	console.log("NAVIGATION: " + JSON.stringify(defaultValues,null,3));
 	const hiloAriadna = $("#hilo_ariadna");
-	const hilo = navigation.hilo_ariadna;
+	const hilo = defaultValues.hilo_ariadna;
 	if (hilo && hilo.length>0)
 	{
 		$("#hilo_ariadna").empty();
@@ -161,20 +161,20 @@ function insertNavigation(navigation)
 	}
 	
 	// Navegaci�n
-	if (navigation.next || navigation.prev)
+	if (defaultValues.next || defaultValues.prev)
 	{
 		const navDiv = $("<div class='row avigation'></div>").appendTo("#nav1");
 		const prev = $("<div class='col-6'>").appendTo(navDiv);
 		const next = $("<div class='col-6 text-end'>").appendTo(navDiv);
 
-		if (navigation.prev)
+		if (defaultValues.prev)
 		{
-			let a = $("<a>").attr("href", navigation.prev.url).text(navigation.prev.descrip).appendTo(prev);	
+			let a = $("<a>").attr("href", defaultValues.prev.url).text(defaultValues.prev.descrip).appendTo(prev);	
 			a.html("&#x25C4; " + a.html());
 		}
-		if (navigation.next)
+		if (defaultValues.next)
 		{
-		 	let a = $("<a>").attr("href", navigation.next.url).text(navigation.next.descrip).appendTo(next); 	
+		 	let a = $("<a>").attr("href", defaultValues.next.url).text(defaultValues.next.descrip).appendTo(next); 	
 			a.html(a.html() + " &#x25BA;");
 		}
 		
@@ -182,9 +182,9 @@ function insertNavigation(navigation)
 	}
 	
 	// Title
-	if (navigation.title)
+	if (defaultValues.title)
 	{
-		$("#main_title").text(navigation.title);
+		$("#main_title").text(defaultValues.title);
 	}
 	else
 	{

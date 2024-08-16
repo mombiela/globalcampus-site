@@ -1,6 +1,6 @@
 import { NamespaceRetriever, STXTParser, getUrlContent } from '../js/stxt-parser.min.js';
 import { transform } from './transform.js';
-import { makeNavigation } from './navigation.js';
+import { getDefaultValues } from './default.js';
 import { getUrlFromHash, getHash } from './utils.js';
 
 export async function buildContentFromHashUrl()
@@ -49,10 +49,10 @@ export async function buildContent(content, stxtUrl)
 	const node = (await parser.parse(content))[0];
 	
 	// Make navigation
-	const navigation = await makeNavigation(getHash(), parser, node);
+	const defaultValues = await getDefaultValues(getHash(), parser, node);
 
 	// Transform page
-	transform(node, navigation);
+	transform(node, defaultValues);
 	plantuml_runonce();
 
 	// Insertamos en fuente

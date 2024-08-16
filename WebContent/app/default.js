@@ -1,9 +1,9 @@
-import { LineSplitter, getUrlContent } from '../js/stxt-parser.min.js';
+import { getUrlContent } from '../js/stxt-parser.min.js';
 import { getUrlFromHash } from './utils.js';
 
 const DEFAULT_DOC = "_default";
 
-export async function makeNavigation(hash, parser, mainNode) 
+export async function getDefaultValues(hash, parser, mainNode) 
 {
 	let result = {};
 	try
