@@ -19,7 +19,7 @@ export const mainConent = `
 	<div class="container-xxl p-1 px-3" id="top_bar">
 		<div class="row">
 			<div class="col-10">
-				<span class="p-0 m-0" id="hilo_ariadna">INDEX: DOC NAME!!</span>
+				<span class="p-0 m-0" id="hilo_ariadna"></span>
 			</div>
 			<div class="col-2 text-end">
 				<span class="p-0 m-0" id="source_page">
@@ -34,25 +34,17 @@ export const mainConent = `
 			<div class="col-12 col-lg-8">
 				<div id="nav1" class="navigation"></div>
 				<div id="inner_content"></div>
-				<div id="nav2" class="navigation" style="display:none;"></div>
 			</div>
 			<div class="col-12 col-lg-4 publi">
-				<p>
-					Este espacio está destinado a publicidad.
-				</p>
-				<p>
-					Si quieres ser un patrocinador nuestro <a href="#contact">contacta con nosotros</a>
-					y podrás incluir enlaces en esta zona.					
-				</p>
+				<p>Este espacio está destinado a publicidad.</p>
+				<p>Si quieres ser un patrocinador nuestro <a href="#contact">contacta con nosotros</a> y podrás incluir enlaces en esta zona.</p>
 				<p><strong>¡Gracias por colaborar!</strong></p>
 			</div>
 		</div>
 	</div>
 	<div class="container-xxl mt-3" id="footer">
 		<div class="row">
-			<footer id="main_footer">
-				<p>&copy; 2024 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p>
-			</footer>
+			<footer id="main_footer"></footer>
 		</div>
 	</div>
 `;
@@ -88,14 +80,9 @@ export const mainEditor = `
 `;
 
 export const docTemplate = `Document (globalcampus.site/namespace.stxt): Insert a name
-
 	Header:	This is a header
 	Subheader: This is a subheader
-	
 	Content:
 		This is a content, **wiki format!!**
 `;
-
-
-
 
