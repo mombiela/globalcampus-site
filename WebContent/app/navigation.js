@@ -37,38 +37,24 @@ export async function makeNavigation(hash, parser, mainNode)
 		// Title
 		// -----
 		
-		let title;
-		try
-		{
-			title = indexNode.getChild("title").getText();
-		}
-		catch(e)
-		{
-		}
-		result['title'] = title;		
+		let title = indexNode.getChild("title").getText();
+		if (title)	result['title'] = title;		
 		
 		// ------------
 		// Hilo Ariadna
 		// ------------
 		
 		let hiloAriadna = [];
-		try
+		let menu = indexNode.getChild("left menu");
+		if (menu != null)
 		{
-			let menu = indexNode.getChild("left menu");
-			if (menu != null)
+			let links = menu.getChildsByName("link");
+			console.log("LINKS: " + links);
+			for (let i = 0; i<links.length; i++)
 			{
-				let links = menu.getChildsByName("link");
-				console.log("LINKS: " + links);
-				for (let i = 0; i<links.length; i++)
-				{
-					let link = links[i];
-					hiloAriadna.push({url: link.getTextSufix(), descrip: link.getTextCentral()});
-				}
+				let link = links[i];
+				hiloAriadna.push({url: link.getTextSufix(), descrip: link.getTextCentral()});
 			}
-		}
-		catch (e)
-		{
-			console.log(e);
 		}
 		
 		result["hilo_ariadna"] = hiloAriadna;
