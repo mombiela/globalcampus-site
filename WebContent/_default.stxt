@@ -5,10 +5,10 @@ Default (globalcampus.site/namespace.stxt):
 	Footer: Copyright 2014 -  
 	
 	Left Menu:
-		Link: (/#github/mombiela/globalcampus-docs/) Documentación
+		Link: Documentación (/#github/mombiela/globalcampus-docs/)
 		
 	Right Menu:
-		Link: (#objective) Objectivos
-		Link: (#contact) Contactar
-		Link: (#conditions) Condiciones
-		Link: (#conditions) Condiciones
+		Link: Objectivos (#objective) 
+		Link: Contactar (#contact) 
+		Link: Condiciones (#conditions) 
+		Link: Condiciones (#conditions) 

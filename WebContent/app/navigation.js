@@ -54,8 +54,7 @@ export async function makeNavigation(hash, parser, mainNode)
 		let hiloAriadna = [];
 		try
 		{
-			let menu = mainNode.getChild("left menu");
-			if (menu == null) menu = indexNode.getChild("left menu");
+			let menu = indexNode.getChild("left menu");
 			if (menu != null)
 			{
 				let links = menu.getChildsByName("link");
@@ -63,7 +62,7 @@ export async function makeNavigation(hash, parser, mainNode)
 				for (let i = 0; i<links.length; i++)
 				{
 					let link = links[i];
-					hiloAriadna.push({url: link.getTextPrefix(), descrip: link.getTextCentral()});
+					hiloAriadna.push({url: link.getTextSufix(), descrip: link.getTextCentral()});
 				}
 			}
 		}
