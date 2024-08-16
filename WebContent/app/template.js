@@ -7,7 +7,7 @@ export const mainConent = `
 		</div>
 		<div class="row">
 			<div class="col-6 p-0">
-				<h2><a href="/">GlobalCampus.site</a> & <a href="https://semantictext.info">SemanticText</a></h2>
+				<h2 id="main_subtitle"></h2>
 			</div>
 			<div class="col-6 text-end text-bottom">
 				<a href="/#objective">Nuestros Objetivos</a> | 
@@ -50,7 +50,7 @@ export const mainConent = `
 	</div>
 	<div class="container-xxl mt-3" id="footer">
 		<div class="row">
-			<footer>
+			<footer id="main_footer">
 				<p>&copy; 2024 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p>
 			</footer>
 		</div>

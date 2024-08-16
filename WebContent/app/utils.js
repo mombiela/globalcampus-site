@@ -92,5 +92,17 @@ export function purify(rawHtml)
     return cleanHtml;      	
 }
 
+export function purifySimple(rawHtml)
+{
+	// Configurar DOMPurify de manera restrictiva
+    const cleanHtml = DOMPurify.sanitize(rawHtml, {
+    	USE_PROFILES: {html: true},
+        ALLOWED_TAGS: ['b', 'i', 'em', 'strong', 'a'],
+        ALLOWED_ATTR: ['href', 'title'],
+        FORBID_TAGS: ['p', 'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'code', 'pre', 'style', 'script', 'iframe', 'object', 'embed', 'form', 'input', 'textarea', 'button', 'select', 'option'],
+        FORBID_ATTR: ['style', 'onerror', 'onload', 'onclick', 'onmouseover', 'onfocus']
+    });
+    return cleanHtml;      	
+}
 
 

@@ -10,12 +10,18 @@ export async function getDefaultValues(hash, parser, mainNode)
 	{
 		const indexNode = await getDefaultNode(hash, parser);
 
-		// -----
-		// Title
-		// -----
+		// -----------------------
+		// Title, subtitle, footer
+		// -----------------------
 		
-		let title = indexNode.getChild("title").getText();
-		if (title)	result['title'] = title;		
+		let title = indexNode.getChild("title");
+		if (title)	result['title'] = title.getText();
+		
+		let  subtitle = indexNode.getChild("subtitle");
+		if (subtitle) result['subtitle'] = subtitle.getText();
+		
+		let footer =  indexNode.getChild("footer");
+		if (footer) result['footer'] = footer.getText();
 		
 		// ------------
 		// Hilo Ariadna

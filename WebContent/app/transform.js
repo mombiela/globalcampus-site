@@ -1,6 +1,6 @@
 import { mainConent } from './template.js';
 import { LineSplitter } from '../js/stxt-parser.min.js';
-import { purify } from './utils.js';
+import { purify, purifySimple } from './utils.js';
 
 export function transform(node, defaultValues) 
 {
@@ -23,7 +23,7 @@ export function transform(node, defaultValues)
 		renderChild(child, innerContent);
 	}
 	
-	// Insertamos navegaci�n
+	// Insertamos default values
 	insertDefaultValues(defaultValues);
 }
 
@@ -160,7 +160,7 @@ function insertDefaultValues(defaultValues)
 		$("#hilo_ariadna").html("&nbsp;");
 	}
 	
-	// Navegaci�n
+	// Next y prev
 	if (defaultValues.next || defaultValues.prev)
 	{
 		const navDiv = $("<div class='row avigation'></div>").appendTo("#nav1");
@@ -181,14 +181,15 @@ function insertDefaultValues(defaultValues)
 		navDiv.clone().appendTo("#nav2");
 	}
 	
-	// Title
-	if (defaultValues.title)
-	{
-		$("#main_title").text(defaultValues.title);
-	}
-	else
-	{
-		$("#main_title").text("GlobalCampus");
-	}
+	// Title, subtitle, footer
+	if (defaultValues.title)	$("#main_title").text(defaultValues.title);
+	else						$("#main_title").text("GlobalCampus");
+	
+	if (defaultValues.subtitle) $("#main_subtitle").html(purifySimple(marked.parse(defaultValues.subtitle)));
+	else 						$("#main_subtitle").html("<a href='/'>GlobalCampus.site</a> & <a href='https://semantictext.info'>SemanticText</a>");
+	
+	if (defaultValues.footer) 	$("#main_footer").html(purify(marked.parse(defaultValues.footer)));
+	else 						$("#main_footer").html("<p>&copy; 2024 - Este obra está bajo una <a style='text-decoration:underline' rel='license' href='https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE'>Licencia MIT</a>.</p>");
+	
 }
 
