@@ -1,3 +1,6 @@
+
+const SAFE_URLS = ["https://semantictext.info"];
+
 export function esDominioValido(dominio) 
 {
     // Expresión regular para verificar nombres de dominio v�lidos
@@ -115,6 +118,11 @@ export function mixUrlAndHash(href)
 		
 		if (href.startsWith('http://') || href.startsWith('https://'))
 		{
+			for (let i = 0; i<SAFE_URLS.length; i++)
+			{
+				if (href.startsWith(SAFE_URLS[i])) return href;
+			}
+			
 			return "/redirect?url=" + href; // ENCODE OK con advertencia
 		} 
 	
