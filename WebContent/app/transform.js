@@ -174,6 +174,7 @@ function insertDefaultValues(defaultValues)
 	else 						$("#main_footer").hide();
 	
 	if (defaultValues.leftMenu)	$("#left_menu").html(purifySimple(marked.parse(defaultValues.leftMenu)));
+	else $("#left_menu").html("&nbsp;");
 	
 	if (defaultValues.rightMenu) $("#right_menu").html(purifySimple(marked.parse(defaultValues.rightMenu)));
 	
