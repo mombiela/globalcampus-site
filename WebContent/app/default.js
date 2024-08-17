@@ -59,9 +59,7 @@ export async function getDefaultValues(hash, parser, mainNode)
 
 async function getDefaultNode(hash, parser)
 {
-	console.log("**** NAVIGATION: " + hash);
 	let i = hash.lastIndexOf("/");
-	let currentDoc = hash.substring(i+1);
 	let hashIndex = hash.substring(0, i) + "/" + DEFAULT_DOC;
 	let last = hash.substring(0,i+1);
 	if (hash.endsWith("/"))
@@ -72,13 +70,9 @@ async function getDefaultNode(hash, parser)
 	
 	if (i == -1) hashIndex = "#" + DEFAULT_DOC; // Hack para página incicial
 
-	console.log("CurrentDoc: " + currentDoc);
-	console.log("hashIndex: " + hashIndex);
 	let hashIndexUrl = getUrlFromHash(hashIndex);
-	console.log("hashIndexUrl: " + hashIndexUrl);
 
 	let indexDoc = await getUrlContent(hashIndexUrl);
 	const indexNode = (await parser.parse(indexDoc))[0];
-	console.log(indexNode.toString());
 	return indexNode;
 }

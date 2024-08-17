@@ -55,7 +55,7 @@ export function getUrlFromHash(hashIni)
 	else     	stxtUrl += ".stxt";
 	
 	// Obtenemos content
-	console.log("URL = " + stxtUrl);
+	//console.log("URL = " + stxtUrl);
 	return stxtUrl;
 }
 
@@ -63,7 +63,7 @@ export function getHash()
 {
 	let hash = window.location.hash || "#index";
 	if (hash.endsWith("/")) hash = hash + "index";
-	console.log("HASH = " + hash);
+	//console.log("HASH = " + hash);
 	return hash;
 }
 
@@ -107,24 +107,41 @@ export function purifySimple(rawHtml)
 
 export function mixUrlAndHash(href)
 {
-    if (href 
-    	&& !href.startsWith('http://') 
-    	&& !href.startsWith('https://') 
-    	&& !href.startsWith('mailto:') 
-    	&& !href.startsWith('/') 
-    	&& !href.startsWith('#') 
-    	&& !href.startsWith('.')) 
-    {
+	try
+	{
+		if (!href || href=="") return href;
 		
-        // Obtener la URL actual
-        var currentUrl = window.location.href;
-        let i = currentUrl.lastIndexOf("/");
-        if (i != -1)
-        {
-            // Concatena la URL actual con el href relativo
-            var newUrl = currentUrl.substring(0,i+1) + href;
-            return newUrl;
+		if (href.startsWith('mailto:') || href.startsWith('#') || href.startsWith("/")) return href;
+		
+		if (href.startsWith('http://') || href.startsWith('https://'))
+		{
+			return "/redirect?url=" + href; // ENCODE OK con advertencia
+		} 
+	
+		let hash = getHash();
+		hash = hash.substring(1);
+		
+		let hashParts = hash.split("/");
+		hashParts.pop();
+		
+		let hrefParts = href.split("/");
+		
+		for (let i = 0; i<hrefParts.length; i++)
+		{
+			let part = hrefParts[i];
+			if (part == "..") hashParts.pop();
+			else if (part ==".") continue;
+			else hashParts.push(part);
 		}
-    }
+		
+		return "#" + hashParts.join('/');
+	}
+	catch (e)
+	{
+		console.log("Error href: ", e);
+		return "#index"
+	}	
+	
+
     return href;
 } 

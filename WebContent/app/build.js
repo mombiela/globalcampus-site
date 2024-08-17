@@ -55,6 +55,9 @@ export async function buildContent(content, stxtUrl)
 	transform(node, defaultValues);
 	plantuml_runonce();
 
+	// Fix de url's relatvias
+	fixUrlsRelativas();
+	
 	// Insertamos en fuente
 	$("#link_source_code").attr("href", stxtUrl);
 	
@@ -62,9 +65,6 @@ export async function buildContent(content, stxtUrl)
 	let hash = getHash();
 	$("#link_editor").attr("href", "/edit.html" + hash);
 
-	// Fix de url's relatvias
-	fixUrlsRelativas();
-	
 	// Mathjax
 	window["mathReload"]();
 }
