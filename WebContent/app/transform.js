@@ -186,7 +186,8 @@ export function fixUrlsRelativas()
 {
 	$('a').each(function() {
         let href = $(this).attr('href');
-		let newUrl = mixUrlAndHash(href);
+        let text = $(this).text();
+		let newUrl = mixUrlAndHash(href, text);
         $(this).attr('href', newUrl);
     });
 }

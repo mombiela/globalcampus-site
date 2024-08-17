@@ -108,7 +108,7 @@ export function purifySimple(rawHtml)
     return cleanHtml;      	
 }
 
-export function mixUrlAndHash(href)
+export function mixUrlAndHash(href, text)
 {
 	try
 	{
@@ -123,7 +123,7 @@ export function mixUrlAndHash(href)
 				if (href.startsWith(SAFE_URLS[i])) return href;
 			}
 			
-			return "/redirect?url=" + href; // ENCODE OK con advertencia
+			return "/redirect?url=" + encodeURIComponent(href) + "&descrip=" + encodeURIComponent(text); // ENCODE OK con advertencia
 		} 
 	
 		let hash = getHash();
