@@ -83,3 +83,19 @@ export const docTemplate = `Document (globalcampus.site/namespace.stxt): Insert 
 		This is a content, **wiki format!!**
 `;
 
+export const docError = `
+<style type="text/css">
+	body {text-align: center;}
+	h1, h2 {font-size: 4em; font-family: monospace; color: rgb(57, 55, 163); margin: 0;}
+	h2 {font-size: 2.5em;}
+	p {margin-top: 1.5em;}
+	a {
+		color: rgb(255, 75, 156);
+		font-size: 1.5em;
+		text-decoration:underline;
+	}
+</style>
+	<h1>500</h1>
+	<h2 id="error_text"></h2>
+	<p><a href="/">Click here to continue</a></p>
+`

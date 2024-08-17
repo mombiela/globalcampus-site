@@ -2,6 +2,7 @@ import { NamespaceRetriever, STXTParser, getUrlContent } from '../js/stxt-parser
 import { transform, fixUrlsRelativas } from './transform.js';
 import { getDefaultValues } from './default.js';
 import { getUrlFromHash, getHash } from './utils.js';
+import { docError } from './template.js';
 
 export async function buildContentFromHashUrl()
 {
@@ -17,7 +18,8 @@ export async function buildContentFromHashUrl()
 	catch(exception)
 	{
 		console.log("Error: " + exception);
-		content.append($("<pre>").text("Page definition not valid: " + exception));
+		content.append($(docError));
+		$("#error_text").text(exception);
 	}
 }
 export async function buildContentFromString(str)
@@ -33,7 +35,8 @@ export async function buildContentFromString(str)
 	catch(exception)
 	{
 		console.log("Error: " + exception);
-		content.append($("<pre>").text("Page definition not valid: " + exception));
+		content.append($(docError));
+		$("#error_text").text(exception);
 	}
 }
 
