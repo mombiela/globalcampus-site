@@ -27,7 +27,7 @@ export async function getDefaultValues(hash, parser, mainNode)
 		addProperty(result, defaultNode, "leftMenu", "left menu");
 		addProperty(result, customDefault, "leftMenu", "left menu");
 
-		addProperty(result, defaultNode, "rightMenu", "righ menu");
+		addProperty(result, defaultNode, "rightMenu", "right menu");
 		addProperty(result, customDefault, "rightMenu", "right menu");
 		
 		addProperty(result, defaultNode, "displaySrc", "display src");
