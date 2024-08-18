@@ -17,6 +17,9 @@
 	#link_source_code {
 		color: yellow;
 	}
+	strong {
+		color: #f7cdb2;
+	}
 }
 
 /*
@@ -26,9 +29,10 @@
 */
 
 #left_menu {
-	a {
-		margin-right: 20px;
-	}
+	a, strong, i {
+		padding-right: 15px;
+		padding-left: 15px;
+	}	
 }
 
 #main_header {
