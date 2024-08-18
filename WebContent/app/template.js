@@ -36,6 +36,13 @@ export const mainConent = `
 				<p>Este espacio está destinado a publicidad.</p>
 				<p>Si quieres ser un patrocinador nuestro <a href="#contact">contacta con nosotros</a> y podrás incluir enlaces en esta zona.</p>
 				<p><strong>¡Gracias por colaborar!</strong></p>
+				<p>
+					Esta portal está creado gracias a por la unión de dos nuevas tecnologías:
+					<ul>
+						<li><a href="https://semantictext.info">SemanticText</a>: Ofrece la tecnología base</li>
+						<li><a href="https://globalcampus.site">GlobalCampus</a>: Primer portal global de aprendizaje</li>
+					</ul>
+				</p>
 			</div>
 		</div>
 	</div>
