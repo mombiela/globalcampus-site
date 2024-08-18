@@ -30,10 +30,10 @@ export async function getDefaultValues(hash, parser, mainNode)
 		if (rightMenu) result['rightMenu'] = rightMenu.getText();
 		
 		let displaySrc = indexNode.getChild("display src");
-		if (!displaySrc || displaySrc.getText() == "true") result.displaySrc = true;
+		result.displaySrc = displaySrc && displaySrc.getText() == "true";
 		
 		let displayEdit = indexNode.getChild("display edit");
-		if (!displayEdit || displayEdit.getText() == "true") result.displayEdit = true;
+		result.displayEdit = displayEdit && displayEdit.getText() == "true";
 		
 		// -----------
 		// NEXT y PREV
