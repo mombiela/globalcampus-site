@@ -3,6 +3,6 @@ Default (globalcampus.site/namespace.stxt):
 	Title: GlobalCampus.site
 	Subtitle: [GlobalCampus.site](/) & [SemanticText](https://semantictext.info)
 	Footer: &copy; 2014 - Esta obra está bajo una [Licencia MIT](https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE)
-	Left Menu: [Documentación](/#github/mombiela/globalcampus-docs/) [Debian!](https://www.debian.org)
+	Left Menu: [Documentación](/#github/mombiela/globalcampus-docs/)
 	Right Menu: [Objectivos](#objective) | [Contactar](#contact) | [Condiciones](#conditions) 
 
