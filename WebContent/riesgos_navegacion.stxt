@@ -1,0 +1,15 @@
+Document (globalcampus.site/namespace.stxt): Riesgos navegación GlobalCampus.site
+
+	Content:
+		El contenido que mostramos en GlobalCampus no ha sido creado por nosotros,
+		sinó por terceras personas. No podemos controlar, ni debemos controlar
+		el contenido, ya que va en contra del objetivo principal del portal:
+		
+	Assert: Ser un visualizador de stxt que cumpla el namespace original
+	
+	Content:
+		Por este motivo cualquier enlace externo puede ser peligroso si no
+		se conoce la procedencia.
+		
+	Alert: Ir a la url de destino si se confía plenamente en el origen
+		del enlace.
