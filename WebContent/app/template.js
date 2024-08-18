@@ -40,7 +40,7 @@ export const mainConent = `
 					Esta portal está creado gracias a por la unión de dos nuevas tecnologías:
 					<ul>
 						<li><a href="https://semantictext.info">SemanticText</a>: Ofrece la tecnología base</li>
-						<li><a href="https://globalcampus.site">GlobalCampus</a>: Primer portal global de aprendizaje</li>
+						<li><a href="https://globalcampus.site">GlobalCampus</a>: Primer Meta Portal de Aprendizaje</li>
 					</ul>
 				</p>
 			</div>
