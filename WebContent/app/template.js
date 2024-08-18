@@ -33,6 +33,7 @@ export const mainConent = `
 				<div id="inner_content"></div>
 			</div>
 			<div class="col-12 col-lg-4 publi">
+				<h1>Publicidad</h1>
 				<p>Este espacio está destinado a publicidad.</p>
 				<p>Si quieres ser un patrocinador nuestro <a href="#contact">contacta con nosotros</a> y podrás incluir enlaces en esta zona.</p>
 				<p><strong>¡Gracias por colaborar!</strong></p>
