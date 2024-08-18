@@ -8,32 +8,36 @@ export async function getDefaultValues(hash, parser, mainNode)
 	let result = {};
 	try
 	{
-		const indexNode = await getDefaultNode(hash, parser);
-
+		const defaultNode = await getDefaultNode(hash, parser);
+		const customDefault = mainNode.getChild("default");
+		
 		// -----------------------
 		// Title, subtitle, footer
 		// -----------------------
 		
-		let title = indexNode.getChild("title");
-		if (title)	result['title'] = title.getText();
+		addProperty(result, defaultNode, "title", "title");
+		addProperty(result, customDefault, "title", "title");
+
+		addProperty(result, defaultNode, "subtitle", "subtitle");
+		addProperty(result, customDefault, "subtitle", "subtitle");
+
+		addProperty(result, defaultNode, "footer", "footer");
+		addProperty(result, customDefault, "footer", "footer");
+
+		addProperty(result, defaultNode, "leftMenu", "left menu");
+		addProperty(result, customDefault, "leftMenu", "left menu");
+
+		addProperty(result, defaultNode, "rightMenu", "righ menu");
+		addProperty(result, customDefault, "rightMenu", "right menu");
 		
-		let  subtitle = indexNode.getChild("subtitle");
-		if (subtitle) result['subtitle'] = subtitle.getText();
+		addProperty(result, defaultNode, "displaySrc", "display src");
+		addProperty(result, customDefault, "displaySrc", "display src");
 		
-		let footer =  indexNode.getChild("footer");
-		if (footer) result['footer'] = footer.getText();
-		
-		let leftMenu = indexNode.getChild("left menu");
-		if (leftMenu) result['leftMenu']  = leftMenu.getText();
-		
-		let rightMenu = indexNode.getChild("right menu");
-		if (rightMenu) result['rightMenu'] = rightMenu.getText();
-		
-		let displaySrc = indexNode.getChild("display src");
-		result.displaySrc = displaySrc && displaySrc.getText() == "true";
-		
-		let displayEdit = indexNode.getChild("display edit");
-		result.displayEdit = displayEdit && displayEdit.getText() == "true";
+		addProperty(result, defaultNode, "displayEdit", "display edit");
+		addProperty(result, customDefault, "displayEdit", "display edit");
+
+		result.displaySrc = result.displaySrc == "true";
+		result.displayEdit = result.displayEdit == "true";
 		
 		// -----------
 		// NEXT y PREV
@@ -55,6 +59,13 @@ export async function getDefaultValues(hash, parser, mainNode)
 		console.log(e);
 	}
 	return result;
+}
+
+function addProperty(result, node, resultProp, nodeProp)
+{
+	if (!node) return;
+	let  value = node.getChild(nodeProp);
+	if (value) result[resultProp] = value.getText();
 }
 
 async function getDefaultNode(hash, parser)
