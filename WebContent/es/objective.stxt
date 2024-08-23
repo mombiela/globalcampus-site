@@ -1,0 +1,57 @@
+Document (globalcampus.site/namespace.stxt): Nuestros objetivos
+
+	Content:
+		Tenemos varios objetivos al hacer este portal. Intentaremos explicarlos:
+		
+		* Prueba de concepto para STxT
+		* Prueba de concepto de MetaPortal
+		* Ayuda efectiva a estudiantes para crear documentación
+		* Ayuda a docentes para crear documentación
+		* Crear una wiki global de aprendizaje
+		
+	Header: Prueba de concepto para STxT
+	Content: 
+		Esta puede ser la segunda web que usa STxT, y realmente está vinculada con la original.
+		Es propósito es ver que se puede usar el lenguaje para describir una web. Realmente el 
+		lenguaje permite describir cualquier web o documento estructurado, por lo que hemos querido
+		empezar por algo práctico: un documento docente. Por este mismo motivo el libro donde
+		se explica STxT está escrito en STxT.
+		
+		Para esta parte hemos desarrollado un parseador de STxT, aunque todavía es una
+		versión preliminar. [Ver en github](https://github.com/mombiela/stxt-parser-js)
+	Header: Prueba de concepto de MetaPortal
+	Content:
+		Este portal está pensado como un metaportal, es decir que sólo busca información que
+		están disponibles en otros portales, però sólo con condiciones muy específicas:
+		
+		* Que el fichero destino sea stxt del namespace globalcampus.site/namespace.stxt
+		* Que retorne cabeceras que permitan a globalcampus.site mostrar la info
+		
+		Si se cumplen estas condiciones se renderiza la página que se informa en la url.
+		Esto hace que el metaportal no tenga conocimiento de las url's a priori,
+		pero permite crecer con unas reglas mínimas.
+		
+		Cualquier persona puede usar el metaportal para crear sus contenidos, e incluso
+		usarlos con fines que desee (siempre lícitos y legales, claro).
+		
+		También pretende ser "Fuente de inspiración" para la creación estructurada y
+		sencilla de páginas web.
+	Header: Ayuda efectiva a estudiantes para crear documentación
+	Content:
+		Los estudiantes pueden crear sus contenidos y dejarlos a disposición de otros estudiantes
+		de forma muy sencilla, ya que sólo es necesario crear un proyecto de github
+		y compartirlo. Puede ser útil a estudiantes particulares o a asociaciones, y además
+		están en control del código fuente, ya que éste no se aloja nunca en globalcampus.
+	Header: Ayuda a docentes para crear documentación
+	Content:
+		No todos los docentes tienen recursos suficientes para crear contenidos, y
+		este metaportal puede ser una ayuda a todos ellos. Igual que los estudiantes pueden
+		usar este portal para hacer contenidos de una forma sencilla, y publicarlos a internet
+		de forma immediata.
+	Header: Crear una wiki global de aprendizaje
+	Alert: El objetivo final es crear una **Wiki global de aprendizaje descentralizada**.
+	Content:
+		Este objetivo es muy ambicioso, pero al ser descentralizada no necesita recursos
+		propios iniciales. Nunca sabremos si esto es posible a no ser que lo intentemos :-D
+	
+	
