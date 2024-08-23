@@ -20,6 +20,7 @@ Namespace: globalcampus.site/namespace.stxt
 		Alert: (*) TEXT
 		Code: (*) TEXT
 		Plantuml: (*) TEXT
+		Html: (*) TEXT
 
 	Default:
 		Title: (1)
