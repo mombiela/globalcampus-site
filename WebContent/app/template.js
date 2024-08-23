@@ -6,10 +6,12 @@ export const mainConent = `
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-6 p-0">
+			<div class="col-12 p-0">
 				<h2 id="main_subtitle"></h2>
 			</div>
-			<div class="col-6 text-end text-bottom" id="right_menu">
+		</div>
+		<div class="row">
+			<div class="col-12 text-end text-bottom" id="right_menu">
 			</div>
 		</div>
 	</div>

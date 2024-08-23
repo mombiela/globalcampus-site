@@ -195,6 +195,7 @@ function insertDefaultValues(defaultValues)
 	else $("#left_menu").html("&nbsp;");
 	
 	if (defaultValues.rightMenu) $("#right_menu").html(purifySimple(marked.parse(defaultValues.rightMenu)));
+	else $("#right_menu").html("&nbsp;");
 	
 	if (!defaultValues.displaySrc) $("#link_source_code").hide();
 	if (!defaultValues.displayEdit) $("#link_editor").hide();
