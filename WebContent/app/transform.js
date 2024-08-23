@@ -1,6 +1,8 @@
 import { mainConent } from './template.js';
 import { LineSplitter } from '../js/stxt-parser.min.js';
-import { purify, purifySimple, mixUrlAndHash } from './utils.js';
+import { purify, purifySimple, mixUrlAndHash, getHash } from './utils.js';
+
+const SAFE_HTML = ["#github/mombiela/", "#semantictext.info/"];
 
 export function transform(node, defaultValues) 
 {
@@ -85,10 +87,26 @@ function renderChild(child, parent)
 	{
 		// No hacemos nada
 	}
+	else if(name=="html" && isSafeHtml())
+	{
+		$(text).appendTo(parent);
+	}
 	else
 	{
 		$("<pre>").text(child.toString()).appendTo(parent);
 	}
+}
+
+function isSafeHtml()
+{
+	const hash = getHash();
+	let index = hash.indexOf("/");
+	if (index == -1) return true;
+	for (let i = 0; i<SAFE_HTML.length; i++)
+	{
+		if (hash.startsWith(SAFE_HTML[i])) return true;
+	}
+	return false;
 }
 
 function renderTema(child)
