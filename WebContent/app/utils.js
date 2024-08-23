@@ -1,5 +1,5 @@
 
-const SAFE_URLS = ["https://semantictext.info","https://raw.githubusercontent.com/mombiela/","https://globalcampus.site"];
+const SAFE_URLS = ["https://semantictext.info","https://raw.githubusercontent.com/mombiela/","https://globalcampus.site","https://github.com/mombiela/"];
 
 export function esDominioValido(dominio) 
 {
