@@ -7,7 +7,6 @@ Namespace: globalcampus.site/namespace.stxt
 			author: (?)
 			last modif: (?) DATE
 			id public: (?)
-			lang: (?)
 		Navigation: (?)
 			Previous: (?)
 			Next: (?)
@@ -30,4 +29,5 @@ Namespace: globalcampus.site/namespace.stxt
 		Right menu: (?)
 		Display src: (?) BOOLEAN
 		Display edit: (?) BOOLEAN
+		Lang: (?)
 
