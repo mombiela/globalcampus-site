@@ -1,15 +1,15 @@
-Document (globalcampus.site/namespace.stxt): Riesgos navegación GlobalCampus.site
+Document (globalcampus.site/namespace.stxt): GlobalCampus.site Browsing Risks
 
 	Content:
-		El contenido que mostramos en GlobalCampus no ha sido creado por nosotros,
-		sinó por terceras personas. No podemos controlar, ni debemos controlar
-		el contenido, ya que va en contra del objetivo principal del portal:
+		The content we display on GlobalCampus is not created by us,
+		but by third parties. We cannot control, nor should we control 
+		the content, as it goes against the main objective of the portal:
 		
-	Assert: Ser un visualizador de stxt que cumpla el namespace original
-	
+	Assert: To be an STxT viewer that adheres to the original namespace
+		
 	Content:
-		Por este motivo cualquier enlace externo puede ser peligroso si no
-		se conoce la procedencia.
+		For this reason, any external link can be dangerous if the source 
+		is not known.
 		
-	Alert: Ir a la url de destino si se confía plenamente en el origen
-		del enlace.
+	Alert: Proceed to the destination URL only if you fully trust the source
+		of the link.
