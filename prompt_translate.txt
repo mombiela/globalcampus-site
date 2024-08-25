@@ -1,0 +1,66 @@
+Hola, te voy a hablar del lenguaje STXT (SemanticText). 
+Es un lenguaje escribir documentos estructurados. Los documentos tienen etiquetas 
+separadas por el caracter ":", y están anidadas mediante tabuladores.
+Con el mismo lenguaje se puede definir un namespace, que definirá 
+un tipo de documento y las etiquetas permitidas y las que no.
+Además, es una práctica habitual que los elementos tipo TEXT acepten formato markdown.
+
+Te pongo un ejemplo de namespace:
+
+Namespace: globalcampus.site/namespace.stxt
+	Document:
+		Default: (?)
+		Metadata: (?)
+			title: (?)
+			description: (?)
+			author: (?)
+			last modif: (?) DATE
+			id public: (?)
+			lang: (?)
+		Navigation: (?)
+			Previous: (?)
+			Next: (?)
+		Preamble: (?) TEXT
+		Header: (*)
+		Subheader: (*)
+		Content: (*) TEXT
+		Math: (*) TEXT
+		Assert: (*) TEXT
+		Alert: (*) TEXT
+		Code: (*) TEXT
+		Plantuml: (*) TEXT
+		Html: (*) TEXT
+
+	Default:
+		Title: (1)
+		Subtitle: (?)
+		Footer: (?)
+		Left Menu: (?)
+		Right menu: (?)
+		Display src: (?) BOOLEAN
+		Display edit: (?) BOOLEAN
+            
+Te pongo un ejemplo de documento de ese namespace:
+
+Document (globalcampus.site/namespace.stxt):
+	Header: ¡Bienvenidos!
+	Alert: ¡Bienvenidos al primer **Meta Portal** de aprendizaje!
+	Content: 
+		Nuestro objetivo principal es crear una wiki global y descentralizada
+		de aprendizaje. Ya se que es un objetivo muy ambicioso, pero todo
+		proyecto empieza con una idea. 
+	
+		Parece precipitado, pero lo mejor es que lo probéis directamente
+		[con la documentación](/#github/mombiela/globalcampus-docs/). También podéis probar nuestro editor (beta) para ver
+		online cambios. El editor es local, los cambios sólo afectan al navegador local
+		mientras se edita, no cambia la visualización normal. 
+		
+	Header: Proyectos asociados
+	Content:
+		¿Quieres que tu proyecto aparezca aquí? [¡Contacta con nosotros!](#contact)
+		
+		De momento tenemos pocos proyectos asociados, ya que acabamos de empezar:
+		
+		* [Semantic Text (version 1.0)](https://semantictext.info) 
+		* [Semantic Text (version 2.0, next version)](#github/mombiela/stxt-book/es/)
+		* [Tech Wizard Academy](#github/mombiela/techwizard-academy/) 
