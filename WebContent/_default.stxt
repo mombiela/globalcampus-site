@@ -1,8 +1,7 @@
 Default (globalcampus.site/namespace.stxt):
 
 	Title: GlobalCampus.site
-	Subtitle: El primer Meta Portal de Aprendizaje
-	Footer: &copy; 2014 - Esta obra está bajo una [Licencia MIT](https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE)
-	Left Menu: [Guia Rápida](/#github/mombiela/globalcampus-docs/) [Contenidos](/#github/mombiela/globalcampus-docs/content/) [Ejemplos](/#github/mombiela/globalcampus-docs/examples/) 
-	Right Menu: [Objectivos](#objective) [Contactar](#contact) [Condiciones](#conditions) | _[Español](es/)_ **English** 
-
+	Subtitle: The first Meta Learning Portal
+	Footer: &copy; 2014 - This work is licensed under a [MIT License](https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE)
+	Left Menu: [Quick Guide](/#github/mombiela/globalcampus-docs/) [Contents](/#github/mombiela/globalcampus-docs/content/) [Examples](/#github/mombiela/globalcampus-docs/examples/) 
+	Right Menu: [Objectives](#objective) [Contact](#contact) [Terms](#conditions) | _[Spanish](es/)_ **English**
