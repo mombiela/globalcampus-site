@@ -1,26 +1,21 @@
 Document (globalcampus.site/namespace.stxt):
-	#Navigation:
-	#	Previous: Anterior (#contact) 
-	#	Next: Siguiente (#objective)
-	Header: ¡Bienvenidos!
-	Alert: ¡Bienvenidos al primer **Meta Portal** de aprendizaje!
+	Header: Welcome!
+	Alert: Welcome to the first **Meta Portal** for learning!
 	Content: 
-		Nuestro objetivo principal es crear una wiki global y descentralizada
-		de aprendizaje. Ya se que es un objetivo muy ambicioso, pero todo
-		proyecto empieza con una idea. 
+		Our main goal is to create a global and decentralized learning wiki. 
+		I know it's a very ambitious goal, but every project starts with an idea.
 	
-		Parece precipitado, pero lo mejor es que lo probéis directamente
-		[con la documentación](/#github/mombiela/globalcampus-docs/). También podéis probar nuestro editor (beta) para ver
-		online cambios. El editor es local, los cambios sólo afectan al navegador local
-		mientras se edita, no cambia la visualización normal. 
+		It may seem rushed, but the best thing is to try it out directly 
+		[with the documentation](/#github/mombiela/globalcampus-docs/). You can also try our editor (beta) to see 
+		changes online. The editor is local, and changes only affect the local browser 
+		while editing; it doesn't change the normal view.
 		
-	Header: Proyectos asociados
+	Header: Associated Projects
 	Content:
-		¿Quieres que tu proyecto aparezca aquí? [¡Contacta con nosotros!](#contact)
+		Do you want your project to appear here? [Contact us!](#contact)
 		
-		De momento tenemos pocos proyectos asociados, ya que acabamos de empezar:
+		For now, we have few associated projects since we have just started:
 		
 		* [Semantic Text (version 1.0)](https://semantictext.info) 
 		* [Semantic Text (version 2.0, next version)](#github/mombiela/stxt-book/es/)
 		* [Tech Wizard Academy](#github/mombiela/techwizard-academy/) 
-		
