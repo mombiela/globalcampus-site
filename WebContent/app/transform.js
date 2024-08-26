@@ -1,6 +1,7 @@
 import { mainConent } from './template.js';
 import { LineSplitter } from '../js/stxt-parser.min.js';
 import { purify, purifySimple, mixUrlAndHash, getHash } from './utils.js';
+import {publi, publi_es} from './template.js';
 
 const SAFE_HTML = ["#github/mombiela/", "#semantictext.info/"];
 
@@ -199,6 +200,9 @@ function insertDefaultValues(defaultValues)
 	
 	if (!defaultValues.displaySrc) $("#link_source_code").hide();
 	if (!defaultValues.displayEdit) $("#link_editor").hide();
+	
+	if (defaultValues.lang && defaultValues.lang == "es") $("#div_publi").html(publi_es);
+	else $("#div_publi").html(publi);
 }
 
 export function fixUrlsRelativas()

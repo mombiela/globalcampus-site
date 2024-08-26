@@ -35,6 +35,9 @@ export async function getDefaultValues(hash, parser, mainNode)
 		
 		addProperty(result, defaultNode, "displayEdit", "display edit");
 		addProperty(result, customDefault, "displayEdit", "display edit");
+		
+		addProperty(result, defaultNode, "lang", "lang");
+		addProperty(result, customDefault, "lang", "lang");
 
 		result.displaySrc = result.displaySrc == "true";
 		result.displayEdit = result.displayEdit == "true";

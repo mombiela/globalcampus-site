@@ -34,18 +34,7 @@ export const mainConent = `
 				<div id="nav1" class="navigation"></div>
 				<div id="inner_content"></div>
 			</div>
-			<div class="col-12 col-lg-4 publi">
-				<h1>Publicidad</h1>
-				<p>Este espacio está destinado a publicidad.</p>
-				<p>Si quieres ser un patrocinador nuestro <a href="#contact">contacta con nosotros</a> y podrás incluir enlaces en esta zona.</p>
-				<p><strong>¡Gracias por colaborar!</strong></p>
-				<p>
-					Esta portal está creado gracias a la unión de dos nuevas tecnologías:
-					<ul>
-						<li><a href="https://semantictext.info">SemanticText</a>: Ofrece la tecnología base</li>
-						<li><a href="https://globalcampus.site">GlobalCampus</a>: Primer Meta Portal de Aprendizaje</li>
-					</ul>
-				</p>
+			<div class="col-12 col-lg-4 publi" id="div_publi">
 			</div>
 		</div>
 	</div>
@@ -92,6 +81,30 @@ export const docTemplate = `Document (globalcampus.site/namespace.stxt): Insert 
 	Content:
 		This is a content, **wiki format!!**
 `;
+
+export const publi = `<h1>Publicity</h1>
+				<p>Este espacio está destinado a publicidad.</p>
+				<p>Si quieres ser un patrocinador nuestro <a href="#contact">contacta con nosotros</a> y podrás incluir enlaces en esta zona.</p>
+				<p><strong>¡Gracias por colaborar!</strong></p>
+				<p>
+					Esta portal está creado gracias a la unión de dos nuevas tecnologías:
+					<ul>
+						<li><a href="https://semantictext.info">SemanticText</a>: Ofrece la tecnología base</li>
+						<li><a href="https://globalcampus.site">GlobalCampus</a>: Primer Meta Portal de Aprendizaje</li>
+					</ul>
+				</p>`
+
+export const publi_es = `<h1>Publicidad</h1>
+				<p>Este espacio está destinado a publicidad.</p>
+				<p>Si quieres ser un patrocinador nuestro <a href="#contact">contacta con nosotros</a> y podrás incluir enlaces en esta zona.</p>
+				<p><strong>¡Gracias por colaborar!</strong></p>
+				<p>
+					Esta portal está creado gracias a la unión de dos nuevas tecnologías:
+					<ul>
+						<li><a href="https://semantictext.info">SemanticText</a>: Ofrece la tecnología base</li>
+						<li><a href="https://globalcampus.site">GlobalCampus</a>: Primer Meta Portal de Aprendizaje</li>
+					</ul>
+				</p>`
 
 export const docError = `
 <style type="text/css">
