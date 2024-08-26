@@ -82,29 +82,29 @@ export const docTemplate = `Document (globalcampus.site/namespace.stxt): Insert 
 		This is a content, **wiki format!!**
 `;
 
-export const publi = `<h1>Publicity</h1>
-				<p>Este espacio está destinado a publicidad.</p>
-				<p>Si quieres ser un patrocinador nuestro <a href="#contact">contacta con nosotros</a> y podrás incluir enlaces en esta zona.</p>
-				<p><strong>¡Gracias por colaborar!</strong></p>
-				<p>
-					Esta portal está creado gracias a la unión de dos nuevas tecnologías:
-					<ul>
-						<li><a href="https://semantictext.info">SemanticText</a>: Ofrece la tecnología base</li>
-						<li><a href="https://globalcampus.site">GlobalCampus</a>: Primer Meta Portal de Aprendizaje</li>
-					</ul>
-				</p>`
+export const publi = `<h1>Advertisement</h1>
+<p>This space is intended for advertising.</p>
+<p>If you want to be one of our sponsors, <a href="#contact">contact us</a> and you can include links in this area.</p>
+<p><strong>Thank you for collaborating!</strong></p>
+<p>
+	This portal was created thanks to the combination of two new technologies:
+	<ul>
+		<li><a href="https://semantictext.info">SemanticText</a>: Provides the core technology</li>
+		<li><a href="https://globalcampus.site">GlobalCampus</a>: The first Meta Learning Portal</li>
+	</ul>
+</p>`
 
 export const publi_es = `<h1>Publicidad</h1>
-				<p>Este espacio está destinado a publicidad.</p>
-				<p>Si quieres ser un patrocinador nuestro <a href="#contact">contacta con nosotros</a> y podrás incluir enlaces en esta zona.</p>
-				<p><strong>¡Gracias por colaborar!</strong></p>
-				<p>
-					Esta portal está creado gracias a la unión de dos nuevas tecnologías:
-					<ul>
-						<li><a href="https://semantictext.info">SemanticText</a>: Ofrece la tecnología base</li>
-						<li><a href="https://globalcampus.site">GlobalCampus</a>: Primer Meta Portal de Aprendizaje</li>
-					</ul>
-				</p>`
+<p>Este espacio está destinado a publicidad.</p>
+<p>Si quieres ser un patrocinador nuestro <a href="#contact">contacta con nosotros</a> y podrás incluir enlaces en esta zona.</p>
+<p><strong>¡Gracias por colaborar!</strong></p>
+<p>
+	Esta portal está creado gracias a la unión de dos nuevas tecnologías:
+	<ul>
+		<li><a href="https://semantictext.info">SemanticText</a>: Ofrece la tecnología base</li>
+		<li><a href="https://globalcampus.site">GlobalCampus</a>: Primer Meta Portal de Aprendizaje</li>
+	</ul>
+</p>`
 
 export const docError = `
 <style type="text/css">
