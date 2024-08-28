@@ -101,8 +101,8 @@ export const publi_es = `<h1>Publicidad</h1>
 <p>
 	Esta portal está creado gracias a la unión de dos nuevas tecnologías:
 	<ul>
-		<li><a href="https://semantictext.info">SemanticText</a>: Ofrece la tecnología base</li>
-		<li><a href="https://globalcampus.site">GlobalCampus</a>: Primer Meta Portal de Aprendizaje</li>
+		<li><a href="https://semantictext.info/es/">SemanticText</a>: Ofrece la tecnología base</li>
+		<li><a href="https://globalcampus.site/#es">GlobalCampus</a>: Primer Meta Portal de Aprendizaje</li>
 	</ul>
 </p>`
 
