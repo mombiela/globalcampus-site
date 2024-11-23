@@ -30,11 +30,9 @@ export const mainConent = `
 	</div>
 	<div class="container-xxl" id="main_content">
 		<div class="row">
-			<div class="col-12 col-lg-8">
+			<div class="col-12">
 				<div id="nav1" class="navigation"></div>
 				<div id="inner_content"></div>
-			</div>
-			<div class="col-12 col-lg-4 publi" id="div_publi">
 			</div>
 		</div>
 	</div>
