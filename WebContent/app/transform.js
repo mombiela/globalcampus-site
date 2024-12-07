@@ -44,6 +44,10 @@ function renderChild(child, parent)
 	{
 		$("<h2>").text(text).appendTo(parent);
 	}
+	else if(name == "subsubheader")
+	{
+		$("<h3>").text(text).appendTo(parent);
+	}
 	else if(name == "content")
 	{
 		$("<div>").html(purify(marked.parse(text))).appendTo(parent);
