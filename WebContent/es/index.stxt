@@ -12,14 +12,4 @@ Document (globalcampus.site/namespace.stxt):
 		Parece precipitado, pero lo mejor es que lo probéis directamente
 		[con la documentación](/#github/mombiela/globalcampus-docs/). También podéis probar nuestro editor (beta) para ver
 		online cambios. El editor es local, los cambios sólo afectan al navegador local
-		mientras se edita, no cambia la visualización normal. 
-		
-	Header: Proyectos asociados
-	Content:
-		¿Quieres que tu proyecto aparezca aquí? [¡Contacta con nosotros!](#contact)
-		
-		De momento tenemos pocos proyectos asociados, ya que acabamos de empezar:
-		
-		* [Semantic Text (Web Oficial)](https://semantictext.info) 
-		* [Semantic Text (Vista GlobalCampus)](#github/mombiela/stxt-book/es/)
-		
+		mientras se edita, no cambia la visualización normal.
